@@ -1,0 +1,4 @@
+P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
+P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
+P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
+P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
