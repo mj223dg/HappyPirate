@@ -64,7 +64,7 @@ namespace HappyPirate.view
             {
                 Member newMember = new Member(firstName, lastName, socialSecurityNumber);
                 System.Console.WriteLine("Member saved!");
-
+                System.Console.WriteLine("test");
             }
 
         }
