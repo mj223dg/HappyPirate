@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace HappyPirate.Model
+namespace HappyPirate.model
 {
     class Member
     {
@@ -16,5 +16,13 @@ namespace HappyPirate.Model
         public string LastName { get; set; }
         public int SocialSecurityNumber { get; set; }
         public string UniqueId { get; set; }
+
+        public Member(string firstName, string lastName, int socialSecurityNumber)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            SocialSecurityNumber = socialSecurityNumber;
+        }
+
     }
 }

@@ -9,10 +9,10 @@ namespace HappyPirate
     {
         static void Main(string[] args)
         {
-            View.Console view = new View.Console();
+            view.Console view = new view.Console();
+            controller.Controller c = new controller.Controller();
 
-            view.ShowInstructions();
-
+            while (c.MenuChoice(view));
 
         }
     }
