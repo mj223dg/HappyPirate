@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 
 namespace HappyPirate.view
 {
@@ -41,7 +42,7 @@ namespace HappyPirate.view
         {
             string firstName;
             string lastName;
-            int socialSecurityNumber;
+            string socialSecurityNumber;
 
             
 
@@ -51,12 +52,16 @@ namespace HappyPirate.view
             System.Console.Write("Enter last name: ");
             lastName = getUserInput();
             System.Console.Write("Enter social security number (numbers only): ");
-            socialSecurityNumber = Int32.Parse(getUserInput());
+            socialSecurityNumber = getUserInput();
 
             System.Console.WriteLine("You entered: ");
             System.Console.WriteLine("{0} {1}\n{2}", firstName, lastName, socialSecurityNumber);
             System.Console.WriteLine();
             System.Console.WriteLine("Save? (Y for yes, any other key for no)");
+
+            string SavePath = Path.Combine(
+                AppDomain.CurrentDomain.GetData("APPBASE").ToString(), "members.txt");
+
 
             char confirmSave = System.Console.ReadKey().KeyChar;
             
@@ -65,6 +70,12 @@ namespace HappyPirate.view
                 Member newMember = new Member(firstName, lastName, socialSecurityNumber);
                 System.Console.WriteLine("Member saved!");
                 System.Console.WriteLine("test");
+
+                using (StreamWriter writer = new StreamWriter(SavePath, true))
+                {
+                    writer.WriteLine("{0} {1} {2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
+                }
+
             }
 
         }

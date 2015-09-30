@@ -12,8 +12,10 @@ namespace HappyPirate
             view.Console view = new view.Console();
             controller.Controller c = new controller.Controller();
 
-            while (c.MenuChoice(view));
+            while (c.MenuChoice(view)) ;
+
 
         }
+
     }
 }
