@@ -11,14 +11,25 @@ namespace HappyPirate.view
     {
         public enum Menu { 
             None,
-            AddMember
+            AddMember,
+            ViewMembers,
+            AddBoat
         }
 
         public void ShowMenu()
         {
-            //System.Console.Clear();
-            System.Console.WriteLine();
+            System.Console.Clear();
+            ShowHeader();
             System.Console.WriteLine("1. Add member");
+            System.Console.WriteLine("2. View Members");
+            System.Console.WriteLine("3. Add boat");
+            System.Console.WriteLine();
+        }
+
+        public void ClearMenu() 
+        {
+            System.Console.Clear();
+            ShowHeader();
         }
 
         private string getUserInput() 
@@ -34,8 +45,24 @@ namespace HappyPirate.view
             {
                 return Menu.AddMember;
             }
-
+            if (c == '2')
+            {
+                return Menu.ViewMembers;
+            }
+            if (c == '3')
+            {
+                return Menu.AddBoat;
+            }
             return Menu.None;
+        }
+
+        public void ShowHeader()
+        {
+            System.Console.WriteLine("//////////////////////");
+            System.Console.WriteLine("// THE HAPPY PIRATE //");
+            System.Console.WriteLine("//     BOAT CLUB    //");
+            System.Console.WriteLine("//////////////////////");
+            System.Console.WriteLine();
         }
 
         public void AddMember()
@@ -43,8 +70,6 @@ namespace HappyPirate.view
             string firstName;
             string lastName;
             string socialSecurityNumber;
-
-            
 
             System.Console.WriteLine("Add member");
             System.Console.Write("Enter first name: ");
@@ -59,8 +84,8 @@ namespace HappyPirate.view
             System.Console.WriteLine();
             System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
-            string SavePath = Path.Combine(
-                AppDomain.CurrentDomain.GetData("APPBASE").ToString(), "members.txt");
+            string SavePath = Path.Combine(AppDomain.CurrentDomain
+                                            .GetData("APPBASE").ToString(), "members.txt");
 
 
             char confirmSave = System.Console.ReadKey().KeyChar;
@@ -68,16 +93,32 @@ namespace HappyPirate.view
             if (confirmSave == 'y')
             {
                 Member newMember = new Member(firstName, lastName, socialSecurityNumber);
-                System.Console.WriteLine("Member saved!");
-                System.Console.WriteLine("test");
-
+                
                 using (StreamWriter writer = new StreamWriter(SavePath, true))
                 {
                     writer.WriteLine("{0} {1} {2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
                 }
 
+                System.Console.WriteLine("Member saved!");
+                System.Console.ReadKey();
             }
 
+        }
+
+        public void ViewMembers()
+        {
+            System.Console.WriteLine("Viewing members");
+            System.Console.WriteLine("Viewing members");
+            System.Console.WriteLine("Viewing members");
+            System.Console.WriteLine("Viewing members");
+            System.Console.WriteLine("Press key to go back to menu.");
+            System.Console.ReadKey();
+        }
+
+        public void AddBoat() 
+        {
+            System.Console.WriteLine("Adding cool boat :D :D :D :D ");
+            System.Console.ReadKey();
         }
 
     }
