@@ -59,7 +59,7 @@ namespace HappyPirate.view
             System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
             char confirmSave = System.Console.ReadKey().KeyChar;
-
+            
             if (confirmSave == 'y')
             {
                 Member newMember = new Member(firstName, lastName, socialSecurityNumber);
