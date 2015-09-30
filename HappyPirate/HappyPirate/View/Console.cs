@@ -107,11 +107,11 @@ namespace HappyPirate.view
 
         public void ViewMembers()
         {
-            System.Console.WriteLine("Viewing members");
-            System.Console.WriteLine("Viewing members");
-            System.Console.WriteLine("Viewing members");
-            System.Console.WriteLine("Viewing members");
-            System.Console.WriteLine("Press key to go back to menu.");
+            string text = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain
+                                            .GetData("APPBASE").ToString(), "members.txt"));
+
+            System.Console.WriteLine(text);
+
             System.Console.ReadKey();
         }
 
