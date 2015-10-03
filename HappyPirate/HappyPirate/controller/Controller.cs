@@ -29,6 +29,11 @@ namespace HappyPirate.controller
                 view.ClearMenu();
                 view.AddBoat();
             }
+            if (menuChoice == HappyPirate.view.Console.Menu.SearchMember)
+            {
+                view.ClearMenu();
+                view.SearchMember();
+            }
             if (menuChoice == HappyPirate.view.Console.Menu.None)
             {
                 view.ShowMenu();

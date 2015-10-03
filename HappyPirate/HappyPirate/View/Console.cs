@@ -13,6 +13,7 @@ namespace HappyPirate.view
             None,
             AddMember,
             ViewMembers,
+            SearchMember,
             AddBoat
         }
 
@@ -23,6 +24,7 @@ namespace HappyPirate.view
             System.Console.WriteLine("1. Add member");
             System.Console.WriteLine("2. View Members");
             System.Console.WriteLine("3. Add boat");
+            System.Console.WriteLine("4. Seach for member");
             System.Console.WriteLine();
 
             System.Console.WriteLine("     .  o ..                  ");
@@ -64,6 +66,10 @@ namespace HappyPirate.view
             if (c == '3')
             {
                 return Menu.AddBoat;
+            }
+            if (c == '4')
+            {
+                return Menu.SearchMember;
             }
             return Menu.None;
         }
@@ -126,6 +132,33 @@ namespace HappyPirate.view
 
             System.Console.ReadKey();
         }
+
+
+        public void SearchMember()
+        {
+            System.Console.Write("Enter user name: ");
+
+            string enteredName = getUserInput();
+            string line;
+
+            // Read the file and display it line by line.
+            System.IO.StreamReader file = new System.IO.StreamReader(Path.Combine(AppDomain.CurrentDomain
+                                            .GetData("APPBASE").ToString(), "members.txt"));
+
+            while ((line = file.ReadLine()) != null)
+            {
+                if (line.Contains(enteredName.ToLower()))
+                {
+                    System.Console.WriteLine(line);
+                }
+            } 
+
+            file.Close();
+
+            System.Console.Write("Press any key");
+            System.Console.ReadKey();
+        }
+
 
         public void AddBoat() 
         {
