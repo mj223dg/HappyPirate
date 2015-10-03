@@ -7,3 +7,8 @@ C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\obj\x86\
 C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
 C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
 C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
+D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
+D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
+D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
+D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
+D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache

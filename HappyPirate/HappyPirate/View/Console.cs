@@ -114,7 +114,7 @@ namespace HappyPirate.view
                 
                 using (StreamWriter writer = new StreamWriter(SavePath, true))
                 {
-                    writer.WriteLine("{0} {1} {2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
+                    writer.WriteLine("{0} {1} {2} {3}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber, newMember.UniqueId);
                 }
 
                 System.Console.WriteLine("Member saved!");
