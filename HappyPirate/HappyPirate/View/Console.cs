@@ -30,7 +30,7 @@ namespace HappyPirate.view
             System.Console.WriteLine("          ...oo               ");
             System.Console.WriteLine("            __[]__            ");
             System.Console.WriteLine(@"         __|_o_o_o\__         ");
-            System.Console.WriteLine("         \''''''''''/         ");
+            System.Console.WriteLine("          \''''''''''/         ");
             System.Console.WriteLine(@"          \. ..  . /          ");
             System.Console.WriteLine("     ^^^^^^^^^^^^^^^^^^^^ ");
 
