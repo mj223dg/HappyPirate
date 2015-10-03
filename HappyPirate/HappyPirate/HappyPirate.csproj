@@ -48,6 +48,7 @@
     <Compile Include="model\Member.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\Validation.cs" />
     <Compile Include="view\Console.cs" />
   </ItemGroup>
   <ItemGroup>

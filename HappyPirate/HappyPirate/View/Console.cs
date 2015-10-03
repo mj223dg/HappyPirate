@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using HappyPirate.Shared;
 
 namespace HappyPirate.view
 {
@@ -88,10 +89,26 @@ namespace HappyPirate.view
             string firstName;
             string lastName;
             string socialSecurityNumber;
+            bool validation;
+
+            Validation Validate = new Validation();
 
             System.Console.WriteLine("Add member");
-            System.Console.Write("Enter first name: ");
-            firstName = getUserInput();
+
+            do
+            {
+                System.Console.Write("Enter first name: ");
+                firstName = getUserInput();
+
+                validation = Validate.validateFirstName(firstName);
+
+                if (!validation)
+                {
+                    System.Console.WriteLine("Wrong format.");
+                }
+            }
+            while (validation == false);
+           
             System.Console.Write("Enter last name: ");
             lastName = getUserInput();
             System.Console.Write("Enter social security number (numbers only): ");
