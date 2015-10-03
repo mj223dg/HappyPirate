@@ -89,25 +89,30 @@ namespace HappyPirate.view
             string firstName;
             string lastName;
             string socialSecurityNumber;
-            bool validation;
 
             Validation Validate = new Validation();
 
             System.Console.WriteLine("Add member");
 
-            do
+            while (true)
             {
                 System.Console.Write("Enter first name: ");
                 firstName = getUserInput();
 
-                validation = Validate.validateFirstName(firstName);
+                try 
+	            {
+                    if (Validate.validateFirstName(firstName))
+                    {
+                        break;
+                    }
 
-                if (!validation)
-                {
-                    System.Console.WriteLine("Wrong format.");
-                }
+                    System.Console.WriteLine("Firstname must be between 1 and 25 characters long");
+	            }
+	            catch (Exception)
+	            {
+                    
+	            }
             }
-            while (validation == false);
            
             System.Console.Write("Enter last name: ");
             lastName = getUserInput();

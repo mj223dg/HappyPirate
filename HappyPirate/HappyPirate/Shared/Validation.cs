@@ -9,12 +9,12 @@ namespace HappyPirate.Shared
     {
         public bool validateFirstName(string firstName)
         {
-            if (firstName.Length > 0 || firstName.Length <= 25)
+            if (firstName.Length < 0 || firstName.Length > 25 || String.IsNullOrEmpty(firstName))
             {
-                return true;
+                return false;
             }
 
-            return false;
+            return true;
         }
 
         public Validation()
