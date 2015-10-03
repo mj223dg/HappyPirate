@@ -24,12 +24,24 @@ namespace HappyPirate.view
             System.Console.WriteLine("2. View Members");
             System.Console.WriteLine("3. Add boat");
             System.Console.WriteLine();
+
+            System.Console.WriteLine("     .  o ..                  ");
+            System.Console.WriteLine("     o . o o.o                ");
+            System.Console.WriteLine("          ...oo               ");
+            System.Console.WriteLine("            __[]__            ");
+            System.Console.WriteLine(@"         __|_o_o_o\__         ");
+            System.Console.WriteLine("         \''''''''''/         ");
+            System.Console.WriteLine(@"          \. ..  . /          ");
+            System.Console.WriteLine("     ^^^^^^^^^^^^^^^^^^^^ ");
+
         }
 
         public void ClearMenu() 
         {
             System.Console.Clear();
             ShowHeader();
+            Boat boat = new Boat("hej", 1, 1);
+            boat.ShowBoatImage();
         }
 
         private string getUserInput() 
@@ -117,8 +129,46 @@ namespace HappyPirate.view
 
         public void AddBoat() 
         {
-            System.Console.WriteLine("Adding cool boat :D :D :D :D ");
-            System.Console.ReadKey();
+            string type;
+            double width;
+            double length;
+            string image;
+
+            System.Console.WriteLine("Add boat");
+
+            System.Console.Write("Enter boat type: ");
+            type = getUserInput();
+
+            System.Console.Write("Enter width: ");
+            width = Double.Parse(getUserInput());
+
+            System.Console.Write("Enter length: ");
+            length = Double.Parse(getUserInput());
+
+
+            System.Console.WriteLine("You entered: ");
+            System.Console.WriteLine("{0} {1}\n{2}", type, width, length);
+            System.Console.WriteLine();
+            System.Console.WriteLine("Save? (Y for yes, any other key for no)");
+
+            string SavePath = Path.Combine(AppDomain.CurrentDomain
+                                            .GetData("APPBASE").ToString(), "boats.txt");
+
+
+            char confirmSave = System.Console.ReadKey().KeyChar;
+
+            if (confirmSave == 'y')
+            {
+                Boat newBoat = new Boat(type, width, length);
+
+                using (StreamWriter writer = new StreamWriter(SavePath, true))
+                {
+                    writer.WriteLine("{0} {1} {2}", newBoat.Type, newBoat.Length, newBoat.Width);
+                }
+
+                System.Console.WriteLine("Boat saved!");
+                System.Console.ReadKey();
+            }
         }
 
     }
