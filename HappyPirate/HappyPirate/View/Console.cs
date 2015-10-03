@@ -113,9 +113,27 @@ namespace HappyPirate.view
                     
 	            }
             }
-           
-            System.Console.Write("Enter last name: ");
-            lastName = getUserInput();
+
+            while (true)
+            {
+                System.Console.Write("Enter last name: ");
+                lastName = getUserInput();
+
+                try
+                {
+                    if (Validate.validateLastName(lastName))
+                    {
+                        break;
+                    }
+
+                    System.Console.WriteLine("Lastname must be max 30 characters long and can't be empty");
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
             System.Console.Write("Enter social security number (numbers only): ");
             socialSecurityNumber = getUserInput();
 
