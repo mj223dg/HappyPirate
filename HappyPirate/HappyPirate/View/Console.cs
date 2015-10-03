@@ -147,7 +147,7 @@ namespace HappyPirate.view
 
             while ((line = file.ReadLine()) != null)
             {
-                if (line.Contains(enteredName.ToLower()))
+                if (line.ToLower().Contains(enteredName.ToLower()))
                 {
                     System.Console.WriteLine(line);
                 }
