@@ -117,6 +117,7 @@ namespace HappyPirate.view
         public void ViewMembers()
         {
             int counter = 1;
+            int choiceInt;
             string line;
             string path = Path.Combine(AppDomain.CurrentDomain
                     .GetData("APPBASE").ToString(), "members.txt");
@@ -134,8 +135,19 @@ namespace HappyPirate.view
 
             file.Close();
 
-            string choice = System.Console.ReadLine();
-            int choiceInt = Int32.Parse(choice);
+            
+
+            while (true)
+            {
+                string choice = System.Console.ReadLine();
+                
+                if (Int32.TryParse(choice, out choiceInt))
+                {
+                    break;
+                }
+
+                System.Console.WriteLine("Must choose a member");
+            }
 
             System.Console.WriteLine(memberList[choiceInt - 1]);
 
