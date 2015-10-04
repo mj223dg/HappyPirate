@@ -159,6 +159,10 @@ namespace HappyPirate.view
             if (memberMenuChoice == "3")
             {
                 DeleteMember(memberList[choiceInt - 1].ToString(), path);
+            }
+            if (memberMenuChoice == "2")
+            {
+                ChangeMember(memberList[choiceInt - 1].ToString());
             }        
 
         }
@@ -176,8 +180,52 @@ namespace HappyPirate.view
             }
         }
 
-        public void ChangeMember()
+        public void ChangeMember(string member)
         {
+            string path = Path.Combine(AppDomain.CurrentDomain
+                .GetData("APPBASE").ToString(), "members.txt");
+
+            List<string> lines = new List<string>(File.ReadAllLines(path));
+            int lineIndex = lines.FindIndex(line => line.StartsWith(member));
+
+            if (lineIndex != -1)
+            {
+
+                string firstName;
+                string lastName;
+                string socialSecurityNumber;
+
+                System.Console.WriteLine("Add member");
+                System.Console.Write("Enter first name: ");
+                firstName = getUserInput();
+                System.Console.Write("Enter last name: ");
+                lastName = getUserInput();
+                System.Console.Write("Enter social security number (numbers only): ");
+                socialSecurityNumber = getUserInput();
+
+                System.Console.WriteLine("You entered: ");
+                System.Console.WriteLine("{0} {1}\n{2}", firstName, lastName, socialSecurityNumber);
+                System.Console.WriteLine();
+                System.Console.WriteLine("Save? (Y for yes, any other key for no)");
+
+                string SavePath = Path.Combine(AppDomain.CurrentDomain
+                                                .GetData("APPBASE").ToString(), "members.txt");
+
+
+                char confirmSave = System.Console.ReadKey().KeyChar;
+
+                if (confirmSave == 'y')
+                {
+                    Member newMember = new Member(firstName, lastName, socialSecurityNumber);
+
+                    lines[lineIndex] = newMember.FirstName + " " + newMember.LastName + " " + newMember.SocialSecurityNumber + " " + newMember.UniqueId;
+                    File.WriteAllLines(path, lines);
+
+                    System.Console.WriteLine("Member saved!");
+                    System.Console.ReadKey();
+                }
+
+            }
 
         }
 
