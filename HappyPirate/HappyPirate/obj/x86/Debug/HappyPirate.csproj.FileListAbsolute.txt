@@ -12,3 +12,5 @@ D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
 D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
 D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
 D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
+C:\Users\Sonny\Desktop\HappyPirate-master\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
+C:\Users\Sonny\Desktop\HappyPirate-master\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
