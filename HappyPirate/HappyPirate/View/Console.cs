@@ -237,8 +237,6 @@ namespace HappyPirate.view
             string lastName;
             string socialSecurityNumber;
 
-            System.Console.WriteLine("Add member");
-
             while (true)
             {
                 System.Console.Write("Enter first name: ");
@@ -305,7 +303,37 @@ namespace HappyPirate.view
             return new Member(firstName, lastName, socialSecurityNumber);
         }
 
-        public void AddBoat() 
+        public void AddBoat()
+        {
+            System.Console.WriteLine("Add boat");
+
+            Boat newBoat = InputToBoatObject();
+
+            System.Console.WriteLine("You entered: ");
+            System.Console.WriteLine("Boat type:{0}\nBoat length:{1}\nBoat width:{2}", newBoat.Type, newBoat.Width, newBoat.Length);
+            System.Console.WriteLine();
+            System.Console.WriteLine("Save? (Y for yes, any other key for no)");
+
+            string SavePath = Path.Combine(AppDomain.CurrentDomain
+                                            .GetData("APPBASE").ToString(), "boats.txt");
+
+
+            char confirmSave = System.Console.ReadKey().KeyChar;
+
+            if (confirmSave == 'y')
+            {
+
+                using (StreamWriter writer = new StreamWriter(SavePath, true))
+                {
+                    writer.WriteLine("{0} {1} {2}", newBoat.Type, newBoat.Length, newBoat.Width);
+                }
+
+                System.Console.WriteLine("Boat saved!");
+                System.Console.ReadKey();
+            }
+        }
+
+        private Boat InputToBoatObject()
         {
             string boatType;
             string width;
@@ -313,8 +341,6 @@ namespace HappyPirate.view
             string length;
             int intLength;
             string image;
-
-            System.Console.WriteLine("Add boat");
 
             while (true)
             {
@@ -332,7 +358,7 @@ namespace HappyPirate.view
                 }
                 catch (Exception)
                 {
-                    
+
                     throw;
                 }
             }
@@ -355,7 +381,7 @@ namespace HappyPirate.view
                 }
                 catch (Exception)
                 {
-                    
+
                     throw;
                 }
             }
@@ -377,36 +403,12 @@ namespace HappyPirate.view
                 }
                 catch (Exception)
                 {
-                    
+
                     throw;
                 }
             }
 
-
-            System.Console.WriteLine("You entered: ");
-            System.Console.WriteLine("Boat type:{0}\nBoat length:{1}\nBoat width:{2}", boatType, width, length);
-            System.Console.WriteLine();
-            System.Console.WriteLine("Save? (Y for yes, any other key for no)");
-
-            string SavePath = Path.Combine(AppDomain.CurrentDomain
-                                            .GetData("APPBASE").ToString(), "boats.txt");
-
-
-            char confirmSave = System.Console.ReadKey().KeyChar;
-
-            if (confirmSave == 'y')
-            {
-                Boat newBoat = new Boat(boatType, intWidth, intLength);
-
-                using (StreamWriter writer = new StreamWriter(SavePath, true))
-                {
-                    writer.WriteLine("{0} {1} {2}", newBoat.Type, newBoat.Length, newBoat.Width);
-                }
-
-                System.Console.WriteLine("Boat saved!");
-                System.Console.ReadKey();
-            }
+            return new Boat(boatType, intWidth, intLength);
         }
-
     }
 }
