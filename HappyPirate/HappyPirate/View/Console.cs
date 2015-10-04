@@ -10,6 +10,18 @@ namespace HappyPirate.view
 {
     class Console
     {
+        private static readonly string MemberSavePath;
+        private static readonly string BoatSavePath;
+
+        static Console()
+        {
+            MemberSavePath = Path.Combine(AppDomain.CurrentDomain
+                .GetData("APPBASE").ToString(), "members.txt");
+
+            BoatSavePath = Path.Combine(AppDomain.CurrentDomain
+                .GetData("APPBASE").ToString(), "boats.txt");
+        }
+
         public enum Menu { 
             None,
             AddMember,
@@ -20,31 +32,18 @@ namespace HappyPirate.view
 
         public void ShowMenu()
         {
-            System.Console.Clear();
-            ShowHeader();
+            ClearMenu();
             System.Console.WriteLine("1. Add member");
             System.Console.WriteLine("2. View Members");
             System.Console.WriteLine("3. Add boat");
             System.Console.WriteLine("4. Seach for member");
             System.Console.WriteLine();
-
-            System.Console.WriteLine("     .  o ..                  ");
-            System.Console.WriteLine("     o . o o.o                ");
-            System.Console.WriteLine("          ...oo               ");
-            System.Console.WriteLine("            __[]__            ");
-            System.Console.WriteLine(@"         __|_o_o_o\__         ");
-            System.Console.WriteLine("          \''''''''''/         ");
-            System.Console.WriteLine(@"          \. ..  . /          ");
-            System.Console.WriteLine("     ^^^^^^^^^^^^^^^^^^^^ ");
-
         }
 
         public void ClearMenu() 
         {
             System.Console.Clear();
             ShowHeader();
-            Boat boat = new Boat("hej", 1, 1);
-            boat.ShowBoatImage();
         }
 
         private string getUserInput() 
@@ -95,15 +94,11 @@ namespace HappyPirate.view
             System.Console.WriteLine();
             System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
-            string SavePath = Path.Combine(AppDomain.CurrentDomain
-                                            .GetData("APPBASE").ToString(), "members.txt");
-
-
             char confirmSave = System.Console.ReadKey().KeyChar;
             
             if (confirmSave == 'y')
             {
-                using (StreamWriter writer = new StreamWriter(SavePath, true))
+                using (StreamWriter writer = new StreamWriter(MemberSavePath, true))
                 {
                     writer.WriteLine("{0} {1} {2} {3}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber, newMember.UniqueId);
                 }
@@ -119,13 +114,11 @@ namespace HappyPirate.view
             int counter = 1;
             int choiceInt;
             string line;
-            string path = Path.Combine(AppDomain.CurrentDomain
-                    .GetData("APPBASE").ToString(), "members.txt");
 
-            List<string> memberList = new List<string>(10);
+            List<string> memberList = new List<string>(100);
 
-            
-            System.IO.StreamReader file = new System.IO.StreamReader(path);
+
+            System.IO.StreamReader file = new System.IO.StreamReader(MemberSavePath);
             while ((line = file.ReadLine()) != null)
             {
                 System.Console.WriteLine("{0}. {1}", counter, line);
@@ -154,14 +147,14 @@ namespace HappyPirate.view
             System.Console.WriteLine();
             System.Console.WriteLine("Member: ");
             System.Console.WriteLine("1. View member - NOT WORKING");
-            System.Console.WriteLine("2. Change member - NOT WORKING");
+            System.Console.WriteLine("2. Change member");
             System.Console.WriteLine("3. Delete member");
             System.Console.WriteLine("Esc - go back");
             string memberMenuChoice = System.Console.ReadKey().KeyChar.ToString();
 
             if (memberMenuChoice == "3")
             {
-                DeleteMember(memberList[choiceInt - 1].ToString(), path);
+                DeleteMember(memberList[choiceInt - 1].ToString());
             }
             if (memberMenuChoice == "2")
             {
@@ -170,7 +163,7 @@ namespace HappyPirate.view
 
         }
 
-        public void DeleteMember(string line, string path)
+        public void DeleteMember(string line)
         {
             System.Console.WriteLine("Are you sure you want to delete selected member? (y for yes)");
 
@@ -178,17 +171,14 @@ namespace HappyPirate.view
 
             if (choice.ToString() == "y")
             {
-                File.WriteAllLines(path,
-                    File.ReadLines(path).Where(l => l != line).ToList());            
+                File.WriteAllLines(MemberSavePath,
+                    File.ReadLines(MemberSavePath).Where(l => l != line).ToList());            
             }
         }
 
         public void ChangeMember(string member)
         {
-            string path = Path.Combine(AppDomain.CurrentDomain
-                .GetData("APPBASE").ToString(), "members.txt");
-
-            List<string> lines = new List<string>(File.ReadAllLines(path));
+            List<string> lines = new List<string>(File.ReadAllLines(MemberSavePath));
             int lineIndex = lines.FindIndex(line => line.StartsWith(member));
 
             if (lineIndex != -1)
@@ -199,16 +189,12 @@ namespace HappyPirate.view
                 System.Console.WriteLine();
                 System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
-                string SavePath = Path.Combine(AppDomain.CurrentDomain
-                                                .GetData("APPBASE").ToString(), "members.txt");
-
-
                 char confirmSave = System.Console.ReadKey().KeyChar;
 
                 if (confirmSave == 'y')
                 {
                     lines[lineIndex] = newMember.FirstName + " " + newMember.LastName + " " + newMember.SocialSecurityNumber + " " + newMember.UniqueId;
-                    File.WriteAllLines(path, lines);
+                    File.WriteAllLines(MemberSavePath, lines);
 
                     System.Console.WriteLine("Member saved!");
                     System.Console.ReadKey();
@@ -226,8 +212,7 @@ namespace HappyPirate.view
             string line;
 
             // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader(Path.Combine(AppDomain.CurrentDomain
-                                            .GetData("APPBASE").ToString(), "members.txt"));
+            System.IO.StreamReader file = new System.IO.StreamReader(MemberSavePath);
 
             while ((line = file.ReadLine()) != null)
             {
@@ -326,16 +311,12 @@ namespace HappyPirate.view
             System.Console.WriteLine();
             System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
-            string SavePath = Path.Combine(AppDomain.CurrentDomain
-                                            .GetData("APPBASE").ToString(), "boats.txt");
-
-
             char confirmSave = System.Console.ReadKey().KeyChar;
 
             if (confirmSave == 'y')
             {
 
-                using (StreamWriter writer = new StreamWriter(SavePath, true))
+                using (StreamWriter writer = new StreamWriter(BoatSavePath, true))
                 {
                     writer.WriteLine("{0} {1} {2}", newBoat.Type, newBoat.Length, newBoat.Width);
                 }
