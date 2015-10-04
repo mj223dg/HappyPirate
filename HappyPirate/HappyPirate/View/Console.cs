@@ -26,7 +26,6 @@ namespace HappyPirate.view
             None,
             AddMember,
             ViewMembers,
-            SearchMember,
             AddBoat
         }
 
@@ -36,7 +35,6 @@ namespace HappyPirate.view
             System.Console.WriteLine("1. Add member");
             System.Console.WriteLine("2. View Members");
             System.Console.WriteLine("3. Add boat");
-            System.Console.WriteLine("4. Seach for member");
             System.Console.WriteLine();
         }
 
@@ -67,10 +65,6 @@ namespace HappyPirate.view
             {
                 return Menu.AddBoat;
             }
-            if (c == '4')
-            {
-                return Menu.SearchMember;
-            }
             return Menu.None;
         }
 
@@ -85,28 +79,7 @@ namespace HappyPirate.view
 
         public void AddMember()
         {
-            System.Console.WriteLine("Add member");
-
-            Member newMember = InputToMemberObject();
-
-            System.Console.WriteLine("You entered: ");
-            System.Console.WriteLine("{0} {1}\n{2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
-            System.Console.WriteLine();
-            System.Console.WriteLine("Save? (Y for yes, any other key for no)");
-
-            char confirmSave = System.Console.ReadKey().KeyChar;
-            
-            if (confirmSave == 'y')
-            {
-                using (StreamWriter writer = new StreamWriter(MemberSavePath, true))
-                {
-                    writer.WriteLine("{0} {1} {2} {3}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber, newMember.UniqueId);
-                }
-
-                System.Console.WriteLine("Member saved!");
-                System.Console.ReadKey();
-            }
-
+            MemberView.AddMember(MemberSavePath);
         }
 
         public void ViewMembers()
@@ -128,12 +101,8 @@ namespace HappyPirate.view
 
             System.Console.WriteLine(memberList[choiceInt - 1]);
 
-            System.Console.WriteLine();
-            System.Console.WriteLine("Member: ");
-            System.Console.WriteLine("1. View member - NOT WORKING");
-            System.Console.WriteLine("2. Change member");
-            System.Console.WriteLine("3. Delete member");
-            System.Console.WriteLine("Esc - go back");
+            MemberView.ShowMemberMenu();
+
             string memberMenuChoice = System.Console.ReadKey().KeyChar.ToString();
 
             if (memberMenuChoice == "3")
@@ -149,67 +118,12 @@ namespace HappyPirate.view
 
         public void DeleteMember(string line)
         {
-            System.Console.WriteLine("Are you sure you want to delete selected member? (y for yes)");
-
-            char choice = System.Console.ReadKey().KeyChar;
-
-            if (choice.ToString() == "y")
-            {
-                File.WriteAllLines(MemberSavePath,
-                    File.ReadLines(MemberSavePath).Where(l => l != line).ToList());            
-            }
+            MemberView.DeleteMember(line, MemberSavePath);
         }
 
         public void ChangeMember(string member)
         {
-            List<string> lines = new List<string>(File.ReadAllLines(MemberSavePath));
-            int lineIndex = lines.FindIndex(line => line.StartsWith(member));
-
-            if (lineIndex != -1)
-            {
-                Member newMember = InputToMemberObject();
-                                
-                System.Console.WriteLine("{0} {1}\n{2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
-                System.Console.WriteLine();
-                System.Console.WriteLine("Save? (Y for yes, any other key for no)");
-
-                char confirmSave = System.Console.ReadKey().KeyChar;
-
-                if (confirmSave == 'y')
-                {
-                    lines[lineIndex] = newMember.FirstName + " " + newMember.LastName + " " + newMember.SocialSecurityNumber + " " + newMember.UniqueId;
-                    File.WriteAllLines(MemberSavePath, lines);
-
-                    System.Console.WriteLine("Member saved!");
-                    System.Console.ReadKey();
-                }
-
-            }
-
-        }
-
-        public void SearchMember()
-        {
-            System.Console.Write("Enter user name: ");
-
-            string enteredName = getUserInput();
-            string line;
-
-            // Read the file and display it line by line.
-            System.IO.StreamReader file = new System.IO.StreamReader(MemberSavePath);
-
-            while ((line = file.ReadLine()) != null)
-            {
-                if (line.ToLower().Contains(enteredName.ToLower()))
-                {
-                    System.Console.WriteLine(line);
-                }
-            } 
-
-            file.Close();
-
-            System.Console.Write("Press any key");
-            System.Console.ReadKey();
+            MemberView.ChangeMember(member, MemberSavePath);
         }
 
         private Member InputToMemberObject() 
