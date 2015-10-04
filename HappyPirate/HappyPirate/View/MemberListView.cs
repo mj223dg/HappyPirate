@@ -7,7 +7,7 @@ namespace HappyPirate.view
 {
     class MemberListView
     {
-        public void ShowAllMembers(string MemberSavePath)
+        public static List<string> ShowAllMembers(string MemberSavePath)
         {
             int counter = 1;
             string line;
@@ -22,6 +22,8 @@ namespace HappyPirate.view
                 counter++;
             }
             file.Close();
+
+            return memberList;
         }
     }
 }

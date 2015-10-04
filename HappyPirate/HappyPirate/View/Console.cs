@@ -111,21 +111,9 @@ namespace HappyPirate.view
 
         public void ViewMembers()
         {
-            int counter = 1;
             int choiceInt;
-            string line;
-
-            List<string> memberList = new List<string>(100);
-
-            System.IO.StreamReader file = new System.IO.StreamReader(MemberSavePath);
-            while ((line = file.ReadLine()) != null)
-            {
-                System.Console.WriteLine("{0}. {1}", counter, line);
-                memberList.Add(line);
-                counter++;
-            }
-            file.Close();
-
+            List<string> memberList = MemberListView.ShowAllMembers(MemberSavePath);
+                        
             while (true)
             {
                 string choice = System.Console.ReadLine();

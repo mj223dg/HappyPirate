@@ -68,6 +68,7 @@ namespace HappyPirate.model
 
         public string UniqueId { get; set; }
 
+        //Main constructor
         public Member(string firstName, string lastName, string socialSecurityNumber)
         {
             FirstName = firstName;
@@ -75,7 +76,15 @@ namespace HappyPirate.model
             SocialSecurityNumber = socialSecurityNumber;
             UniqueId = SetUniqueId();
         }
+        public Member(string firstName, string lastName, string socialSecurityNumber, string uniqueId)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            SocialSecurityNumber = socialSecurityNumber;
+            UniqueId = uniqueId;
+        }
 
+        public Member(){}
 
         private string SetUniqueId()
         {
