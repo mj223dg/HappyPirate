@@ -68,6 +68,14 @@ namespace HappyPirate.model
 
         public string UniqueId { get; set; }
 
+        public Member(string firstName, string lastName, string socialSecurityNumber)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            SocialSecurityNumber = socialSecurityNumber;
+            UniqueId = SetUniqueId();
+        }
+
 
         private string SetUniqueId()
         {
@@ -98,14 +106,6 @@ namespace HappyPirate.model
             file.Close();
 
             return randomString;
-        }
-
-        public Member(string firstName, string lastName, string socialSecurityNumber)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            SocialSecurityNumber = socialSecurityNumber;
-            UniqueId = SetUniqueId();
         }
 
     }

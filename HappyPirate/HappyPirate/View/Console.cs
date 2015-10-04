@@ -117,7 +117,6 @@ namespace HappyPirate.view
 
             List<string> memberList = new List<string>(100);
 
-
             System.IO.StreamReader file = new System.IO.StreamReader(MemberSavePath);
             while ((line = file.ReadLine()) != null)
             {
@@ -125,10 +124,7 @@ namespace HappyPirate.view
                 memberList.Add(line);
                 counter++;
             }
-
             file.Close();
-
-            
 
             while (true)
             {
