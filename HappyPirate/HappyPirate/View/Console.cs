@@ -256,7 +256,7 @@ namespace HappyPirate.view
 
                 try
                 {
-                    if (Validation.validateFirstName(firstName))
+                    if (Validation.validateString(firstName, 25))
                     {
                         break;
                     }
@@ -276,7 +276,7 @@ namespace HappyPirate.view
 
                 try
                 {
-                    if (Validation.validateLastName(lastName))
+                    if (Validation.validateString(lastName, 30))
                     {
                         break;
                     }
@@ -361,7 +361,7 @@ namespace HappyPirate.view
 
                 try
                 {
-                    if (Validation.validateBoatType(boatType))
+                    if (Validation.validateString(boatType, 20))
                     {
                         break;
                     }
@@ -382,7 +382,7 @@ namespace HappyPirate.view
 
                 try
                 {
-                    if (Validation.validateBoatWidth(width))
+                    if (Validation.validateBoatMeasures(width))
                     {
                         intWidth = int.Parse(width);
                         break;
@@ -405,7 +405,7 @@ namespace HappyPirate.view
 
                 try
                 {
-                    if (Validation.validateBoatLength(length))
+                    if (Validation.validateBoatMeasures(length))
                     {
                         intLength = int.Parse(length);
                         break;

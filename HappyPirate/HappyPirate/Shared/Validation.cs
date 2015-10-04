@@ -7,19 +7,9 @@ namespace HappyPirate.Shared
 {
     public abstract class Validation
     {
-        public static bool validateFirstName(string firstName)
+        public static bool validateString(string stringToValidate, int length)
         {
-            if (firstName.Length > 25 || String.IsNullOrEmpty(firstName))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public static bool validateLastName(string lastName)
-        {
-            if (lastName.Length > 30 || String.IsNullOrEmpty(lastName))
+            if (stringToValidate.Length > length || String.IsNullOrEmpty(stringToValidate) || stringToValidate.Any(char.IsDigit))
             {
                 return false;
             }
@@ -29,9 +19,7 @@ namespace HappyPirate.Shared
 
         public static bool validateSocialNumber(string socialNumber)
         {
-            long result;
-            bool isNumber = Int64.TryParse(socialNumber, out result);
-            if (!isNumber || socialNumber.Length != 10)
+            if (!socialNumber.All(char.IsDigit) || socialNumber.Length != 10)
             {
                 return false;
             }
@@ -39,33 +27,11 @@ namespace HappyPirate.Shared
             return true;
         }
 
-        public static bool validateBoatType(string boatType)
-        {
-            if (boatType.Length > 30 || String.IsNullOrEmpty(boatType))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public static bool validateBoatWidth(string boatWidth)
+        public static bool validateBoatMeasures(string boatMeasures)
         {
             int result;
 
-            if (!Int32.TryParse(boatWidth, out result) || result <= 0 || result > 30)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        public static bool validateBoatLength(string boatLenght)
-        {
-            int result;
-
-            if (!Int32.TryParse(boatLenght, out result) || result <= 0 || result > 30)
+            if (!Int32.TryParse(boatMeasures, out result) || result <= 0 || result > 30)
             {
                 return false;
             }
