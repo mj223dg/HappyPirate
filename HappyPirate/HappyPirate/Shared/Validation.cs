@@ -29,13 +29,13 @@ namespace HappyPirate.Shared
 
         public static bool validateSocialNumber(string socialNumber)
         {
-            int result;
-            bool isNumber = Int32.TryParse(socialNumber, out result);
-            if (!isNumber)
+            long result;
+            bool isNumber = Int64.TryParse(socialNumber, out result);
+            if (!isNumber || socialNumber.Length != 10)
             {
                 return false;
             }
-
+            
             return true;
         }
 

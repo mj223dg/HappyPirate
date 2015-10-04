@@ -86,78 +86,12 @@ namespace HappyPirate.view
 
         public void AddMember()
         {
-            string firstName;
-            string lastName;
-            string socialSecurityNumber;
-
-
             System.Console.WriteLine("Add member");
 
-            while (true)
-            {
-                System.Console.Write("Enter first name: ");
-                firstName = getUserInput();
-
-                try 
-	            {
-                    if (Validation.validateFirstName(firstName))
-                    {
-                        break;
-                    }
-
-                    System.Console.WriteLine("Firstname must be between 1 and 25 characters long");
-	            }
-	            catch (Exception)
-	            {
-                    throw;
-	            }
-            }
-
-            while (true)
-            {
-                System.Console.Write("Enter last name: ");
-                lastName = getUserInput();
-
-                try
-                {
-                    if (Validation.validateLastName(lastName))
-                    {
-                        break;
-                    }
-
-                    System.Console.WriteLine("Lastname must be max 30 characters long and can't be empty");
-                }
-                catch (Exception)
-                {
-                    
-                    throw;
-                }
-            }
-
-            while (true)
-            {
-                System.Console.Write("Enter social security number (numbers only): ");
-                socialSecurityNumber = getUserInput();
-
-                try
-                {
-                    if (Validation.validateSocialNumber(socialSecurityNumber))
-                    {
-                        break;
-                    }
-
-                    System.Console.WriteLine("Something wrong with social number");
-
-                }
-                catch (Exception)
-                {
-                    
-                    throw;
-                }
-            }
+            Member newMember = InputToMemberObject();
 
             System.Console.WriteLine("You entered: ");
-            System.Console.WriteLine("{0} {1}\n{2}", firstName, lastName, socialSecurityNumber);
+            System.Console.WriteLine("{0} {1}\n{2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
             System.Console.WriteLine();
             System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
@@ -169,8 +103,6 @@ namespace HappyPirate.view
             
             if (confirmSave == 'y')
             {
-                Member newMember = new Member(firstName, lastName, socialSecurityNumber);
-                
                 using (StreamWriter writer = new StreamWriter(SavePath, true))
                 {
                     writer.WriteLine("{0} {1} {2} {3}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber, newMember.UniqueId);
@@ -249,21 +181,9 @@ namespace HappyPirate.view
 
             if (lineIndex != -1)
             {
-
-                string firstName;
-                string lastName;
-                string socialSecurityNumber;
-
-                System.Console.WriteLine("Add member");
-                System.Console.Write("Enter first name: ");
-                firstName = getUserInput();
-                System.Console.Write("Enter last name: ");
-                lastName = getUserInput();
-                System.Console.Write("Enter social security number (numbers only): ");
-                socialSecurityNumber = getUserInput();
-
-                System.Console.WriteLine("You entered: ");
-                System.Console.WriteLine("{0} {1}\n{2}", firstName, lastName, socialSecurityNumber);
+                Member newMember = InputToMemberObject();
+                                
+                System.Console.WriteLine("{0} {1}\n{2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
                 System.Console.WriteLine();
                 System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
@@ -275,8 +195,6 @@ namespace HappyPirate.view
 
                 if (confirmSave == 'y')
                 {
-                    Member newMember = new Member(firstName, lastName, socialSecurityNumber);
-
                     lines[lineIndex] = newMember.FirstName + " " + newMember.LastName + " " + newMember.SocialSecurityNumber + " " + newMember.UniqueId;
                     File.WriteAllLines(path, lines);
 
@@ -313,6 +231,79 @@ namespace HappyPirate.view
             System.Console.ReadKey();
         }
 
+        private Member InputToMemberObject() 
+        {
+            string firstName;
+            string lastName;
+            string socialSecurityNumber;
+
+            System.Console.WriteLine("Add member");
+
+            while (true)
+            {
+                System.Console.Write("Enter first name: ");
+                firstName = getUserInput();
+
+                try
+                {
+                    if (Validation.validateFirstName(firstName))
+                    {
+                        break;
+                    }
+
+                    System.Console.WriteLine("Firstname must be between 1 and 25 characters long");
+                }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }
+
+            while (true)
+            {
+                System.Console.Write("Enter last name: ");
+                lastName = getUserInput();
+
+                try
+                {
+                    if (Validation.validateLastName(lastName))
+                    {
+                        break;
+                    }
+
+                    System.Console.WriteLine("Lastname must be max 30 characters long and can't be empty");
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+            while (true)
+            {
+                System.Console.Write("Enter social security number (numbers only): ");
+                socialSecurityNumber = getUserInput();
+
+                try
+                {
+                    if (Validation.validateSocialNumber(socialSecurityNumber))
+                    {
+                        break;
+                    }
+
+                    System.Console.WriteLine("Something wrong with social number");
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+            return new Member(firstName, lastName, socialSecurityNumber);
+        }
 
         public void AddBoat() 
         {
