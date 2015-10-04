@@ -125,14 +125,61 @@ namespace HappyPirate.view
 
         public void ViewMembers()
         {
-            string text = File.ReadAllText(Path.Combine(AppDomain.CurrentDomain
-                                            .GetData("APPBASE").ToString(), "members.txt"));
+            int counter = 1;
+            string line;
+            string path = Path.Combine(AppDomain.CurrentDomain
+                    .GetData("APPBASE").ToString(), "members.txt");
 
-            System.Console.WriteLine(text);
+            List<string> memberList = new List<string>(10);
 
-            System.Console.ReadKey();
+            
+            System.IO.StreamReader file = new System.IO.StreamReader(path);
+            while ((line = file.ReadLine()) != null)
+            {
+                System.Console.WriteLine("{0}. {1}", counter, line);
+                memberList.Add(line);
+                counter++;
+            }
+
+            file.Close();
+
+            string choice = System.Console.ReadLine();
+            int choiceInt = Int32.Parse(choice);
+
+            System.Console.WriteLine(memberList[choiceInt - 1]);
+
+            System.Console.WriteLine();
+            System.Console.WriteLine("Member: ");
+            System.Console.WriteLine("1. View member - NOT WORKING");
+            System.Console.WriteLine("2. Change member - NOT WORKING");
+            System.Console.WriteLine("3. Delete member");
+            System.Console.WriteLine("Esc - go back");
+            string memberMenuChoice = System.Console.ReadKey().KeyChar.ToString();
+
+            if (memberMenuChoice == "3")
+            {
+                DeleteMember(memberList[choiceInt - 1].ToString(), path);
+            }        
+
         }
 
+        public void DeleteMember(string line, string path)
+        {
+            System.Console.WriteLine("Are you sure you want to delete selected member? (y for yes)");
+
+            char choice = System.Console.ReadKey().KeyChar;
+
+            if (choice.ToString() == "y")
+            {
+                File.WriteAllLines(path,
+                    File.ReadLines(path).Where(l => l != line).ToList());            
+            }
+        }
+
+        public void ChangeMember()
+        {
+
+        }
 
         public void SearchMember()
         {
