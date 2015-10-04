@@ -8,14 +8,14 @@ namespace HappyPirate.model
     class Boat
     {
         private string _type;
-        private double _width;
-        private double _length;
+        private int _width;
+        private int _length;
 
         public string Type { get; set; }
-        public double Width { get; set; }
-        public double Length{ get; set; }
+        public int Width { get; set; }
+        public int Length{ get; set; }
 
-        public Boat(string type, double width, double length)
+        public Boat(string type, int width, int length)
         {
             Type = type;
             Width = width;

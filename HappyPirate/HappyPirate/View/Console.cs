@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.IO;
+using HappyPirate.Shared;
 
 namespace HappyPirate.view
 {
@@ -89,13 +90,71 @@ namespace HappyPirate.view
             string lastName;
             string socialSecurityNumber;
 
+
             System.Console.WriteLine("Add member");
-            System.Console.Write("Enter first name: ");
-            firstName = getUserInput();
-            System.Console.Write("Enter last name: ");
-            lastName = getUserInput();
-            System.Console.Write("Enter social security number (numbers only): ");
-            socialSecurityNumber = getUserInput();
+
+            while (true)
+            {
+                System.Console.Write("Enter first name: ");
+                firstName = getUserInput();
+
+                try 
+	            {
+                    if (Validation.validateFirstName(firstName))
+                    {
+                        break;
+                    }
+
+                    System.Console.WriteLine("Firstname must be between 1 and 25 characters long");
+	            }
+	            catch (Exception)
+	            {
+                    throw;
+	            }
+            }
+
+            while (true)
+            {
+                System.Console.Write("Enter last name: ");
+                lastName = getUserInput();
+
+                try
+                {
+                    if (Validation.validateLastName(lastName))
+                    {
+                        break;
+                    }
+
+                    System.Console.WriteLine("Lastname must be max 30 characters long and can't be empty");
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
+
+            while (true)
+            {
+                System.Console.Write("Enter social security number (numbers only): ");
+                socialSecurityNumber = getUserInput();
+
+                try
+                {
+                    if (Validation.validateSocialNumber(socialSecurityNumber))
+                    {
+                        break;
+                    }
+
+                    System.Console.WriteLine("Something wrong with social number");
+
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
 
             System.Console.WriteLine("You entered: ");
             System.Console.WriteLine("{0} {1}\n{2}", firstName, lastName, socialSecurityNumber);
@@ -257,25 +316,84 @@ namespace HappyPirate.view
 
         public void AddBoat() 
         {
-            string type;
-            double width;
-            double length;
+            string boatType;
+            string width;
+            int intWidth;
+            string length;
+            int intLength;
             string image;
 
             System.Console.WriteLine("Add boat");
 
-            System.Console.Write("Enter boat type: ");
-            type = getUserInput();
+            while (true)
+            {
+                System.Console.Write("Enter boat type: ");
+                boatType = getUserInput();
 
-            System.Console.Write("Enter width: ");
-            width = Double.Parse(getUserInput());
+                try
+                {
+                    if (Validation.validateBoatType(boatType))
+                    {
+                        break;
+                    }
 
-            System.Console.Write("Enter length: ");
-            length = Double.Parse(getUserInput());
+                    System.Console.WriteLine("Something wrong with boat type");
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
+
+            while (true)
+            {
+                System.Console.Write("Enter width: ");
+                width = getUserInput();
+
+                try
+                {
+                    if (Validation.validateBoatWidth(width))
+                    {
+                        intWidth = int.Parse(width);
+                        break;
+                    }
+
+                    System.Console.WriteLine("Something wrong with boat width");
+
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
+
+            while (true)
+            {
+                System.Console.Write("Enter length: ");
+                length = getUserInput();
+
+                try
+                {
+                    if (Validation.validateBoatLength(length))
+                    {
+                        intLength = int.Parse(length);
+                        break;
+                    }
+
+                    System.Console.WriteLine("Something wrong with boat length");
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
 
 
             System.Console.WriteLine("You entered: ");
-            System.Console.WriteLine("{0} {1}\n{2}", type, width, length);
+            System.Console.WriteLine("Boat type:{0}\nBoat length:{1}\nBoat width:{2}", boatType, width, length);
             System.Console.WriteLine();
             System.Console.WriteLine("Save? (Y for yes, any other key for no)");
 
@@ -287,7 +405,7 @@ namespace HappyPirate.view
 
             if (confirmSave == 'y')
             {
-                Boat newBoat = new Boat(type, width, length);
+                Boat newBoat = new Boat(boatType, intWidth, intLength);
 
                 using (StreamWriter writer = new StreamWriter(SavePath, true))
                 {
