@@ -1,24 +1,5 @@
-P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
-P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
-P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
-P:\cfg\github\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
-C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
-C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
-C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
-C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
-C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
-<<<<<<< HEAD
-D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
-D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
-D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
-D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
-D:\Skolarbete\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
-C:\Users\Sonny\Desktop\HappyPirate-master\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
-C:\Users\Sonny\Desktop\HappyPirate-master\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
-=======
-K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
-K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
 K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
 K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
 K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
->>>>>>> Validation
+K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
+K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
