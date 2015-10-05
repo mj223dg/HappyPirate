@@ -29,6 +29,7 @@ namespace HappyPirate.view
             AddBoat
         }
 
+        #region console menu interface methods
         public void ShowMenu()
         {
             ClearMenu();
@@ -38,11 +39,22 @@ namespace HappyPirate.view
             System.Console.WriteLine();
         }
 
+        public void ShowHeader()
+        {
+            System.Console.WriteLine("//////////////////////");
+            System.Console.WriteLine("// THE HAPPY PIRATE //");
+            System.Console.WriteLine("//     BOAT CLUB    //");
+            System.Console.WriteLine("//////////////////////");
+            System.Console.WriteLine();
+        }
+
         public void ClearMenu() 
         {
             System.Console.Clear();
             ShowHeader();
         }
+        #endregion
+
 
         private string getUserInput() 
         {
@@ -68,18 +80,10 @@ namespace HappyPirate.view
             return Menu.None;
         }
 
-        public void ShowHeader()
-        {
-            System.Console.WriteLine("//////////////////////");
-            System.Console.WriteLine("// THE HAPPY PIRATE //");
-            System.Console.WriteLine("//     BOAT CLUB    //");
-            System.Console.WriteLine("//////////////////////");
-            System.Console.WriteLine();
-        }
 
         public void AddMember()
         {
-            MemberView.AddMember(MemberSavePath);
+            MemberView.AddMember();
         }
 
         public void ViewMembers()
@@ -118,7 +122,7 @@ namespace HappyPirate.view
 
         public void DeleteMember(string line)
         {
-            MemberView.DeleteMember(line, MemberSavePath);
+            MemberView.DeleteMember(line);
         }
 
         public void ChangeMember(string member)

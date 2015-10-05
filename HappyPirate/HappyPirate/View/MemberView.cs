@@ -41,7 +41,7 @@ namespace HappyPirate.view
             System.Console.WriteLine("Esc - go back");
         }
 
-        public static void DeleteMember(string line, string path)
+        public static void DeleteMember(string line)
         {
             System.Console.WriteLine("Are you sure you want to delete selected member? (y for yes)");
 
@@ -49,8 +49,7 @@ namespace HappyPirate.view
 
             if (choice.ToString() == "y")
             {
-                File.WriteAllLines(path,
-                    File.ReadLines(path).Where(l => l != line).ToList());
+                model.DAL.MemberDAL.DeleteMember(line);
             }
         }
 
@@ -81,7 +80,7 @@ namespace HappyPirate.view
             }
         }
 
-        public static void AddMember(string path)
+        public static void AddMember()
         {
             System.Console.WriteLine("Add member");
 
@@ -96,10 +95,7 @@ namespace HappyPirate.view
 
             if (confirmSave == 'y')
             {
-                using (StreamWriter writer = new StreamWriter(path, true))
-                {
-                    writer.WriteLine("{0} {1} {2} {3}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber, newMember.UniqueId);
-                }
+                model.DAL.MemberDAL.DALAddMember(newMember);
 
                 System.Console.WriteLine("Member saved!");
                 System.Console.ReadKey();
