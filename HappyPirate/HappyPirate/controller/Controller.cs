@@ -54,10 +54,13 @@ namespace HappyPirate.controller
                 {
                     MemberView.ChangeMember(selectedMember);
                 }
-
-
-                //MemberView.ShowMemberMenu();
-                //ConsoleView.ViewMembers();
+                if (memberMenuChoice == 3)
+                {
+                    if (MemberView.DoDeleteMember())
+                    {
+                        model.DAL.MemberDAL.DeleteMember(selectedMember);
+                    }
+                }
             }
             if (menuChoice == HappyPirate.view.Console.Menu.AddBoat)
             {

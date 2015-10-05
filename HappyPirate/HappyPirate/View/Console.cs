@@ -85,10 +85,10 @@ namespace HappyPirate.view
 
 
         #region member
-        public void DeleteMember(string line)
-        {
-            MemberView.DeleteMember(line);
-        }
+        //public void DeleteMember(string line)
+        //{
+        //    MemberView.DeleteMember(line);
+        //}
         #endregion
 
         public void AddBoat()

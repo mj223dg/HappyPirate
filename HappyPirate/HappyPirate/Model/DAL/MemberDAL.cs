@@ -19,10 +19,11 @@ namespace HappyPirate.model.DAL
             }
         }
 
-        public static void DeleteMember(string memberKeyword)
+        public static void DeleteMember(Member memberToDelete)
         {
-            File.WriteAllLines(MemberSavePath,
-                File.ReadLines(MemberSavePath).Where(l => l != memberKeyword).ToList());
+            var file = System.IO.File.ReadAllLines(MemberSavePath);
+            var fileWithoutMemberToDelete = file.Where(line => !line.Contains(memberToDelete.UniqueId));
+            System.IO.File.WriteAllLines(MemberSavePath, fileWithoutMemberToDelete);
         }
 
         public static void ChangeMember(string memberKeyWord, Member member)

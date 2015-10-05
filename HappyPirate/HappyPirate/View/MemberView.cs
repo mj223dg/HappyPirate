@@ -48,7 +48,7 @@ namespace HappyPirate.view
             }
         }
 
-        public static void DeleteMember(string line)
+        public bool DoDeleteMember()
         {
             System.Console.WriteLine("Are you sure you want to delete selected member? (y for yes)");
 
@@ -56,8 +56,9 @@ namespace HappyPirate.view
 
             if (choice.ToString() == "y")
             {
-                model.DAL.MemberDAL.DeleteMember(line);
+                return true;
             }
+            return false;
         }
 
         public void ChangeMember(Member member)
