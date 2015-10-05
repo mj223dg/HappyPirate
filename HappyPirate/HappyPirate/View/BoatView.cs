@@ -26,11 +26,10 @@ namespace HappyPirate.view
             if (confirmSave == 'y')
             {
                 return newBoat;
-                //System.Console.WriteLine("Boat saved!");
-                //System.Console.ReadKey();
             }
             return null;
         }
+
 
         private Boat InputToBoatObject()
         {

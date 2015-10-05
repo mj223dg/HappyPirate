@@ -18,5 +18,15 @@ namespace HappyPirate.model.DAL
                 writer.WriteLine("{0} {1} {2} {3}", newBoat.OwnerId, newBoat.Type, newBoat.Length, newBoat.Width);
             }
         }
+
+        public static List<string> BoatList(string ownerId)
+        {
+            return System.IO.File
+                .ReadAllLines(BoatSavePath)
+                .Where(i => i.Contains(ownerId))
+                .ToList();
+        }
+
+
     }
 }

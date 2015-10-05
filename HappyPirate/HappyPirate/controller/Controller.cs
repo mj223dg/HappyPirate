@@ -12,15 +12,17 @@ namespace HappyPirate.controller
         private view.MemberView MemberView;
         private view.MemberListView MemberListView;
         private view.BoatView BoatView;
+        private view.BoatListView BoatListView;
         private model.Member MemberModel;
 
-        public Controller(view.Console cV, view.MemberView mV, view.MemberListView mlV, model.Member m, view.BoatView bV)
+        public Controller(view.Console cV, view.MemberView mV, view.MemberListView mlV, model.Member m, view.BoatView bV, view.BoatListView bLV)
         {
             ConsoleView = cV;
             MemberView = mV;
             MemberListView = mlV;
             MemberModel = m;
             BoatView = bV;
+            BoatListView = bLV;
         }
 
         public bool MenuChoice() 
@@ -69,6 +71,13 @@ namespace HappyPirate.controller
                     newBoat.OwnerId = selectedMember.UniqueId;
 
                     model.DAL.BoatDAL.AddBoat(newBoat);
+                }
+                if (memberMenuChoice == 5)
+                {
+                    List<string> boats = model.DAL.BoatDAL.BoatList(selectedMember.UniqueId);
+
+                    BoatListView.ShowBoatsByMember(boats);
+
                 }
 
             }

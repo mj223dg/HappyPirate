@@ -27,12 +27,14 @@ namespace HappyPirate.view
                 System.Console.WriteLine("1. View member - NOT WORKING");
                 System.Console.WriteLine("2. Change member");
                 System.Console.WriteLine("3. Delete member");
+                System.Console.WriteLine(" - - - - - - - - ");
                 System.Console.WriteLine("4. Add boat");
+                System.Console.WriteLine("5. View member boats (change and delete)");
                 System.Console.WriteLine("Any other key - go back");
                 try
                 {
                     selectedNumber = System.Console.ReadKey().KeyChar.ToString();
-                    if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 4 && selectedNumberInt >= 1)
+                    if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 5 && selectedNumberInt >= 1)
                     {
                         return selectedNumberInt;
                     }
