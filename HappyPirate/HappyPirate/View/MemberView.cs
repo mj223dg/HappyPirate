@@ -85,7 +85,7 @@ namespace HappyPirate.view
             }
         }
 
-        public static void AddMember()
+        public Member AddMember()
         {
             System.Console.WriteLine("Add member");
 
@@ -100,11 +100,15 @@ namespace HappyPirate.view
 
             if (confirmSave == 'y')
             {
-                model.DAL.MemberDAL.DALAddMember(newMember);
+                //model.DAL.MemberDAL.AddMember(newMember);
 
                 System.Console.WriteLine("Member saved!");
-                System.Console.ReadKey();
+
+                return newMember;
             }
+
+            return null;
+
         }
 
         private static Member InputToMemberObject()

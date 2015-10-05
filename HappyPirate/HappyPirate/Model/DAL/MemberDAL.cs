@@ -11,7 +11,7 @@ namespace HappyPirate.model.DAL
         private static string MemberSavePath = Path.Combine(AppDomain.CurrentDomain
                 .GetData("APPBASE").ToString(), "members.txt");
 
-        public static void DALAddMember(Member newMember)
+        public static void AddMember(Member newMember)
         {
             using (StreamWriter writer = new StreamWriter(MemberSavePath, true))
             {

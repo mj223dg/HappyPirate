@@ -28,10 +28,15 @@ namespace HappyPirate.controller
             view.Console.Menu menuChoice;
 
             menuChoice = ConsoleView.GetMenuChoice();
+
             if (menuChoice == HappyPirate.view.Console.Menu.AddMember)
             {
                 ConsoleView.ClearMenu();
-                ConsoleView.AddMember();
+
+                Member newMember = MemberView.AddMember();
+
+                model.DAL.MemberDAL.AddMember(newMember);
+
             }
             if (menuChoice == HappyPirate.view.Console.Menu.ViewMembers)
             {
