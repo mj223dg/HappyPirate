@@ -17,14 +17,35 @@ namespace HappyPirate.view
 
         public int ShowMemberMenu()
         {
-            System.Console.WriteLine();
-            System.Console.WriteLine("Member: ");
-            System.Console.WriteLine("1. View member - NOT WORKING");
-            System.Console.WriteLine("2. Change member");
-            System.Console.WriteLine("3. Delete member");
-            System.Console.WriteLine("Esc - go back");
+            string selectedNumber;
+            int selectedNumberInt;
 
-            return int.Parse(System.Console.ReadKey().KeyChar.ToString());
+            while (true)
+            {
+                System.Console.WriteLine();
+                System.Console.WriteLine("Member: ");
+                System.Console.WriteLine("1. View member - NOT WORKING");
+                System.Console.WriteLine("2. Change member");
+                System.Console.WriteLine("3. Delete member");
+                System.Console.WriteLine("Any key - go back");
+                try
+                {
+                    selectedNumber = System.Console.ReadKey().KeyChar.ToString();
+                    if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 3 && selectedNumberInt >= 1)
+                    {
+                        return selectedNumberInt;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
         }
 
         public static void DeleteMember(string line)

@@ -33,11 +33,34 @@ namespace HappyPirate.view
 
         public int SelectMember()
         {
-            System.Console.WriteLine();
-            System.Console.Write("Select member number and press enter: ");
+            int i = 0;
+            string SelectedNumber;
+            int SelectedNumberInt;
 
-            return int.Parse(System.Console.ReadLine()) - 1;
+            using (StreamReader r = new StreamReader(MemberSavePath))
+            {
+                while (r.ReadLine() != null) { i++; }
+            }
+
+            while (true)
+            {
+                System.Console.WriteLine();
+                System.Console.Write("Select member number and press enter: ");
+                SelectedNumber = System.Console.ReadLine();
+
+                try
+                {
+                    if (Int32.TryParse(SelectedNumber, out SelectedNumberInt) && SelectedNumberInt > 0 && SelectedNumberInt <= i)
+                    {
+                        return SelectedNumberInt - 1;
+                    }
+                }
+                catch (Exception)
+                {
+                    
+                    throw;
+                }
+            }
         }
-
     }
 }

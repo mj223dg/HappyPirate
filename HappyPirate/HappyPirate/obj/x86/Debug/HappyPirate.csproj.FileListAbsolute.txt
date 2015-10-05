@@ -13,3 +13,8 @@ C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\obj\x86\
 C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
 C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
 C:\Users\Sonny\Documents\Plugg\OOAD\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
+C:\Temp\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
+C:\Temp\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
+C:\Temp\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
+C:\Temp\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
+C:\Temp\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
