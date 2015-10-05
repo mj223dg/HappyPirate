@@ -11,11 +11,11 @@ namespace HappyPirate.model.DAL
         private static string BoatSavePath = Path.Combine(AppDomain.CurrentDomain
                 .GetData("APPBASE").ToString(), "boats.txt");
 
-        public static void DALAddBoat(Boat newBoat)
+        public static void AddBoat(Boat newBoat)
         {
             using (StreamWriter writer = new StreamWriter(BoatSavePath, true))
             {
-                writer.WriteLine("{0} {1} {2}", newBoat.Type, newBoat.Length, newBoat.Width);
+                writer.WriteLine("{0} {1} {2} {3}", newBoat.OwnerId, newBoat.Type, newBoat.Length, newBoat.Width);
             }
         }
     }

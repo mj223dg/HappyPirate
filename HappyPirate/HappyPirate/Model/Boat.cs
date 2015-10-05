@@ -14,6 +14,7 @@ namespace HappyPirate.model
         public string Type { get; set; }
         public int Width { get; set; }
         public int Length{ get; set; }
+        public string OwnerId { get; set; }
 
         public Boat(string type, int width, int length)
         {
@@ -21,18 +22,12 @@ namespace HappyPirate.model
             Width = width;
             Length = length;
         }
-
-        public void ShowBoatImage()
+        public Boat(string ownerId, string type, int width, int length)
         {
-            Console.WriteLine("     .  o ..                  ");
-            Console.WriteLine("     o . o o.o                ");
-            Console.WriteLine("          ...oo               ");
-            Console.WriteLine("            __[]__            ");
-            Console.WriteLine("         __|_o_o_o\\__         ");
-            Console.WriteLine("         \''''''''''/         ");
-            Console.WriteLine("          \\. ..  . /          ");
-            Console.WriteLine("     ^^^^^^^^^^^^^^^^^^^^ ");
+            OwnerId = ownerId;
+            Type = type;
+            Width = width;
+            Length = length;
         }
-
     }
 }

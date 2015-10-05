@@ -83,14 +83,6 @@ namespace HappyPirate.view
             return Menu.None;
         }
 
-
-        #region member
-        //public void DeleteMember(string line)
-        //{
-        //    MemberView.DeleteMember(line);
-        //}
-        #endregion
-
         public void AddBoat()
         {
             BoatView newBoatView =  new BoatView();

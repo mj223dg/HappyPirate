@@ -10,7 +10,7 @@ namespace HappyPirate.view
 {
     class BoatView
     {
-        public void AddBoat()
+        public Boat AddBoat()
         {
             System.Console.WriteLine("Add boat");
 
@@ -25,13 +25,11 @@ namespace HappyPirate.view
 
             if (confirmSave == 'y')
             {
-                {
-                    model.DAL.BoatDAL.DALAddBoat(newBoat);
-                }
-
-                System.Console.WriteLine("Boat saved!");
-                System.Console.ReadKey();
+                return newBoat;
+                //System.Console.WriteLine("Boat saved!");
+                //System.Console.ReadKey();
             }
+            return null;
         }
 
         private Boat InputToBoatObject()

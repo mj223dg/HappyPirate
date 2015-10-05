@@ -11,14 +11,16 @@ namespace HappyPirate.controller
         private view.Console ConsoleView;
         private view.MemberView MemberView;
         private view.MemberListView MemberListView;
+        private view.BoatView BoatView;
         private model.Member MemberModel;
 
-        public Controller(view.Console cV, view.MemberView mV, view.MemberListView mlV, model.Member m)
+        public Controller(view.Console cV, view.MemberView mV, view.MemberListView mlV, model.Member m, view.BoatView bV)
         {
             ConsoleView = cV;
             MemberView = mV;
             MemberListView = mlV;
             MemberModel = m;
+            BoatView = bV;
         }
 
         public bool MenuChoice() 
@@ -61,6 +63,14 @@ namespace HappyPirate.controller
                         model.DAL.MemberDAL.DeleteMember(selectedMember);
                     }
                 }
+                if (memberMenuChoice == 4)
+                {
+                    Boat newBoat = BoatView.AddBoat();
+                    newBoat.OwnerId = selectedMember.UniqueId;
+
+                    model.DAL.BoatDAL.AddBoat(newBoat);
+                }
+
             }
             if (menuChoice == HappyPirate.view.Console.Menu.AddBoat)
             {
