@@ -35,5 +35,24 @@ namespace HappyPirate.model.DAL
             lines[lineIndex] = member.FirstName + " " + member.LastName + " " + member.SocialSecurityNumber + " " + member.UniqueId;
             File.WriteAllLines(MemberSavePath, lines);
         }
+
+        public static Member GetMember(int textFileLineIndex)
+        {
+            Member member = new Member();
+            string[] memberCredentials = new string[3];
+
+            //http://stackoverflow.com/a/1262985
+            string lineNumber = File.ReadLines(MemberSavePath).Skip(textFileLineIndex).Take(1).First();
+
+            memberCredentials = lineNumber.Split(' ');
+
+            member.FirstName = memberCredentials[0];
+            member.LastName = memberCredentials[1];
+            member.SocialSecurityNumber = memberCredentials[2];
+            member.UniqueId = memberCredentials[3];
+
+            return member;
+        }
+
     }
 }
