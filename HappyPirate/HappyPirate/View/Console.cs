@@ -90,48 +90,9 @@ namespace HappyPirate.view
             MemberView.AddMember();
         }
 
-        public void ViewMembers()
-        {
-            int choiceInt;
-            List<string> memberList = MemberListView.ShowAllMembers(MemberSavePath);
-                        
-            while (true)
-            {
-                string choice = System.Console.ReadLine();
-                
-                if (Int32.TryParse(choice, out choiceInt))
-                {
-                    break;
-                }
-
-                System.Console.WriteLine("Must choose a member");
-            }
-
-            System.Console.WriteLine(memberList[choiceInt - 1]);
-
-            MemberView.ShowMemberMenu();
-
-            string memberMenuChoice = System.Console.ReadKey().KeyChar.ToString();
-
-            if (memberMenuChoice == "3")
-            {
-                DeleteMember(memberList[choiceInt - 1].ToString());
-            }
-            if (memberMenuChoice == "2")
-            {
-                ChangeMember(memberList[choiceInt - 1].ToString());
-            }        
-
-        }
-
         public void DeleteMember(string line)
         {
             MemberView.DeleteMember(line);
-        }
-
-        public void ChangeMember(string member)
-        {
-            MemberView.ChangeMember(member, MemberSavePath);
         }
 
         private Member InputToMemberObject() 
@@ -241,7 +202,7 @@ namespace HappyPirate.view
             int intWidth;
             string length;
             int intLength;
-            string image;
+            //string image;
 
             while (true)
             {

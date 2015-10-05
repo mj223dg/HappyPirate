@@ -7,9 +7,9 @@ namespace HappyPirate.model
 {
     class Boat
     {
-        private string _type;
-        private int _width;
-        private int _length;
+        //private string _type;
+        //private int _width;
+        //private int _length;
 
         public string Type { get; set; }
         public int Width { get; set; }

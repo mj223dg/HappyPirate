@@ -1,5 +1,7 @@
-﻿using System;
+﻿using HappyPirate.model;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -7,7 +9,10 @@ namespace HappyPirate.view
 {
     class MemberListView
     {
-        public static List<string> ShowAllMembers(string MemberSavePath)
+        private string MemberSavePath = Path.Combine(AppDomain.CurrentDomain
+                .GetData("APPBASE").ToString(), "members.txt");
+
+        public List<string> ShowAllMembers()
         {
             int counter = 1;
             string line;
@@ -25,5 +30,14 @@ namespace HappyPirate.view
 
             return memberList;
         }
+
+        public int SelectMember()
+        {
+            System.Console.WriteLine();
+            System.Console.Write("Select member number and press enter: ");
+
+            return int.Parse(System.Console.ReadLine()) - 1;
+        }
+
     }
 }

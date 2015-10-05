@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HappyPirate.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,31 +8,60 @@ namespace HappyPirate.controller
 {
     class Controller
     {
-        public bool MenuChoice(view.Console view) 
+        private view.Console ConsoleView;
+        private view.MemberView MemberView;
+        private view.MemberListView MemberListView;
+        private model.Member MemberModel;
+
+        public Controller(view.Console cV, view.MemberView mV, view.MemberListView mlV, model.Member m)
         {
-            view.ShowMenu();
+            ConsoleView = cV;
+            MemberView = mV;
+            MemberListView = mlV;
+            MemberModel = m;
+        }
+
+        public bool MenuChoice() 
+        {
+            ConsoleView.ShowMenu();
 
             view.Console.Menu menuChoice;
 
-            menuChoice = view.GetMenuChoice();
+            menuChoice = ConsoleView.GetMenuChoice();
             if (menuChoice == HappyPirate.view.Console.Menu.AddMember)
             {
-                view.ClearMenu();
-                view.AddMember();
+                ConsoleView.ClearMenu();
+                //MemberView.AddMember();
             }
             if (menuChoice == HappyPirate.view.Console.Menu.ViewMembers)
             {
-                view.ClearMenu();
-                view.ViewMembers();
+                ConsoleView.ClearMenu();
+                MemberListView.ShowAllMembers();
+
+                int memberChoiceNumber = MemberListView.SelectMember();
+
+                Member selectedMember = model.DAL.MemberDAL.GetMember(memberChoiceNumber);
+                Console.WriteLine(selectedMember.UniqueId);
+
+                int memberMenuChoice = MemberView.ShowMemberMenu();
+
+                if (memberMenuChoice == 2)
+                {
+                    MemberView.ChangeMember(selectedMember);
+                }
+
+
+                //MemberView.ShowMemberMenu();
+                //ConsoleView.ViewMembers();
             }
             if (menuChoice == HappyPirate.view.Console.Menu.AddBoat)
             {
-                view.ClearMenu();
-                view.AddBoat();
+                ConsoleView.ClearMenu();
+                ConsoleView.AddBoat();
             }
             if (menuChoice == HappyPirate.view.Console.Menu.None)
             {
-                view.ShowMenu();
+                ConsoleView.ShowMenu();
             }
             return true;
 

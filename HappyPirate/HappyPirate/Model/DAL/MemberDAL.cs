@@ -26,13 +26,15 @@ namespace HappyPirate.model.DAL
                 File.ReadLines(MemberSavePath).Where(l => l != memberKeyword).ToList());
         }
 
-        public static void ChangeMember(string memberKeyword, Member member)
+        public static void ChangeMember(string memberKeyWord, Member member)
         {
-            Console.WriteLine();
+            Console.WriteLine(memberKeyWord);
             List<string> lines = new List<string>(File.ReadAllLines(MemberSavePath));
-            int lineIndex = lines.FindIndex(line => line.StartsWith(memberKeyword));
+            int lineIndex = lines.FindIndex(line => line.StartsWith(memberKeyWord));
+            System.Console.WriteLine("line index är {0}, memberkeyword är {1}", lineIndex, memberKeyWord);
+            System.Console.ReadLine();
 
-            lines[lineIndex] = member.FirstName + " " + member.LastName + " " + member.SocialSecurityNumber + " " + member.UniqueId;
+            lines[lineIndex] = member.UniqueId + " " + member.FirstName + " " + member.LastName + " " + member.SocialSecurityNumber;
             File.WriteAllLines(MemberSavePath, lines);
         }
 
@@ -46,10 +48,10 @@ namespace HappyPirate.model.DAL
 
             memberCredentials = lineNumber.Split(' ');
 
-            member.FirstName = memberCredentials[0];
-            member.LastName = memberCredentials[1];
-            member.SocialSecurityNumber = memberCredentials[2];
-            member.UniqueId = memberCredentials[3];
+            member.UniqueId = memberCredentials[0];
+            member.FirstName = memberCredentials[1];
+            member.LastName = memberCredentials[2];
+            member.SocialSecurityNumber = memberCredentials[3];
 
             return member;
         }

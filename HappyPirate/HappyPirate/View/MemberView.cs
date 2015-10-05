@@ -15,7 +15,7 @@ namespace HappyPirate.view
             return model.DAL.MemberDAL.GetMember(textFileLineIndex);
         }
 
-        public static void ShowMemberMenu()
+        public int ShowMemberMenu()
         {
             System.Console.WriteLine();
             System.Console.WriteLine("Member: ");
@@ -23,6 +23,8 @@ namespace HappyPirate.view
             System.Console.WriteLine("2. Change member");
             System.Console.WriteLine("3. Delete member");
             System.Console.WriteLine("Esc - go back");
+
+            return int.Parse(System.Console.ReadKey().KeyChar.ToString());
         }
 
         public static void DeleteMember(string line)
@@ -37,12 +39,15 @@ namespace HappyPirate.view
             }
         }
 
-        public static void ChangeMember(string memberKeyword, string path)
+        public void ChangeMember(Member member)
         {
-            //List<string> lines = new List<string>(File.ReadAllLines(path));
-            //int lineIndex = lines.FindIndex(line => line.StartsWith(memberKeyword));
+            Member newMemberInfo = InputToMemberObject();
 
-            Member member = InputToMemberObject();
+            member.FirstName = newMemberInfo.FirstName;
+            member.LastName = newMemberInfo.LastName;
+            member.SocialSecurityNumber = newMemberInfo.SocialSecurityNumber;
+
+            string memberKeyword = member.UniqueId;
 
             System.Console.WriteLine("{0} {1}\n{2}", member.FirstName, member.LastName, member.SocialSecurityNumber);
             System.Console.WriteLine();
@@ -57,7 +62,6 @@ namespace HappyPirate.view
                 System.Console.WriteLine("Member saved!");
                 System.Console.ReadKey();
             }
-
         }
 
         public static void AddMember()

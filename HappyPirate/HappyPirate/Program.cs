@@ -11,12 +11,14 @@ namespace HappyPirate
     {
         static void Main(string[] args)
         {
-            view.Console view = new view.Console();
-            controller.Controller c = new controller.Controller();
+            view.Console cV = new view.Console();
+            view.MemberView mV = new view.MemberView();
+            view.MemberListView mlV = new view.MemberListView();
+            model.Member m = new model.Member();
 
-          while (c.MenuChoice(view)) ;
+            controller.Controller c = new controller.Controller(cV, mV, mlV, m);
 
-
+            while (c.MenuChoice()) ;
         }
 
     }
