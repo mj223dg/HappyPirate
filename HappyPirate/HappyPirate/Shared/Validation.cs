@@ -31,7 +31,7 @@ namespace HappyPirate.Shared
         {
             int result;
 
-            if (!Int32.TryParse(boatMeasures, out result) || result <= 0 || result > 30)
+            if (!Int32.TryParse(boatMeasures, out result) || result <= 0 || result > 50)
             {
                 return false;
             }

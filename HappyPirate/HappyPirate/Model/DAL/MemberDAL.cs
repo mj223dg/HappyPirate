@@ -15,7 +15,7 @@ namespace HappyPirate.model.DAL
         {
             using (StreamWriter writer = new StreamWriter(MemberSavePath, true))
             {
-                writer.WriteLine("{0} {1} {2} {3}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber, newMember.UniqueId);
+                writer.WriteLine("{0} {1} {2} {3}", newMember.UniqueId, newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
             }
         }
 

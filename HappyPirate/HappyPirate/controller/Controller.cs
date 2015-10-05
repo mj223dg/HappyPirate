@@ -31,7 +31,7 @@ namespace HappyPirate.controller
             if (menuChoice == HappyPirate.view.Console.Menu.AddMember)
             {
                 ConsoleView.ClearMenu();
-                //MemberView.AddMember();
+                ConsoleView.AddMember();
             }
             if (menuChoice == HappyPirate.view.Console.Menu.ViewMembers)
             {
