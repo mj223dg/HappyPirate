@@ -10,6 +10,14 @@ namespace HappyPirate.view
 {
     class Console
     {
+        public enum Menu { 
+            None,
+            AddMember,
+            ViewMembers,
+            AddBoat
+        }
+
+        #region fields and constructor
         private static readonly string MemberSavePath;
         private static readonly string BoatSavePath;
 
@@ -21,13 +29,8 @@ namespace HappyPirate.view
             BoatSavePath = Path.Combine(AppDomain.CurrentDomain
                 .GetData("APPBASE").ToString(), "boats.txt");
         }
+        #endregion
 
-        public enum Menu { 
-            None,
-            AddMember,
-            ViewMembers,
-            AddBoat
-        }
 
         #region console menu interface methods
         public void ShowMenu()
@@ -54,7 +57,7 @@ namespace HappyPirate.view
             ShowHeader();
         }
         #endregion
-
+        
 
         private string getUserInput() 
         {
@@ -81,6 +84,7 @@ namespace HappyPirate.view
         }
 
 
+        #region member
         public void AddMember()
         {
             MemberView.AddMember();
@@ -201,7 +205,9 @@ namespace HappyPirate.view
 
             return new Member(firstName, lastName, socialSecurityNumber);
         }
+        #endregion
 
+        #region boat
         public void AddBoat()
         {
             System.Console.WriteLine("Add boat");
@@ -305,5 +311,6 @@ namespace HappyPirate.view
 
             return new Boat(boatType, intWidth, intLength);
         }
+        #endregion
     }
 }

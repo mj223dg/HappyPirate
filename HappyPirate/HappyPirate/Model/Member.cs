@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HappyPirate.model
 {
-    class Member
+    public class Member
     {
         private string _firstName;
         private string _lastName;

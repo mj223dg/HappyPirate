@@ -8,10 +8,13 @@ namespace HappyPirate.model.DAL
 {
     public class MemberDAL : DALBase
     {
+        private static string MemberSavePath = Path.Combine(AppDomain.CurrentDomain
+                .GetData("APPBASE").ToString(), "members.txt");
+
 
         public static void DALAddMember(Member newMember)
         {
-            using (StreamWriter writer = new StreamWriter(GetMemberSavePath(), true))
+            using (StreamWriter writer = new StreamWriter(MemberSavePath, true))
             {
                 writer.WriteLine("{0} {1} {2} {3}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber, newMember.UniqueId);
             }
@@ -19,9 +22,18 @@ namespace HappyPirate.model.DAL
 
         public static void DeleteMember(string memberKeyword)
         {
-            File.WriteAllLines(GetMemberSavePath(),
-                File.ReadLines(GetMemberSavePath()).Where(l => l != memberKeyword).ToList());
+            File.WriteAllLines(MemberSavePath,
+                File.ReadLines(MemberSavePath).Where(l => l != memberKeyword).ToList());
         }
 
+        public static void ChangeMember(string memberKeyword, Member member)
+        {
+            Console.WriteLine();
+            List<string> lines = new List<string>(File.ReadAllLines(MemberSavePath));
+            int lineIndex = lines.FindIndex(line => line.StartsWith(memberKeyword));
+
+            lines[lineIndex] = member.FirstName + " " + member.LastName + " " + member.SocialSecurityNumber + " " + member.UniqueId;
+            File.WriteAllLines(MemberSavePath, lines);
+        }
     }
 }

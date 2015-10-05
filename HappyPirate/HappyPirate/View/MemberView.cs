@@ -53,31 +53,27 @@ namespace HappyPirate.view
             }
         }
 
-        public static void ChangeMember(string member, string path)
+        public static void ChangeMember(string memberKeyword, string path)
         {
-            List<string> lines = new List<string>(File.ReadAllLines(path));
-            int lineIndex = lines.FindIndex(line => line.StartsWith(member));
+            //List<string> lines = new List<string>(File.ReadAllLines(path));
+            //int lineIndex = lines.FindIndex(line => line.StartsWith(memberKeyword));
 
-            if (lineIndex != -1)
+            Member member = InputToMemberObject();
+
+            System.Console.WriteLine("{0} {1}\n{2}", member.FirstName, member.LastName, member.SocialSecurityNumber);
+            System.Console.WriteLine();
+            System.Console.WriteLine("Save? (Y for yes, any other key for no)");
+
+            char confirmSave = System.Console.ReadKey().KeyChar;
+
+            if (confirmSave == 'y')
             {
-                Member newMember = InputToMemberObject();
+                model.DAL.MemberDAL.ChangeMember(memberKeyword, member);
 
-                System.Console.WriteLine("{0} {1}\n{2}", newMember.FirstName, newMember.LastName, newMember.SocialSecurityNumber);
-                System.Console.WriteLine();
-                System.Console.WriteLine("Save? (Y for yes, any other key for no)");
-
-                char confirmSave = System.Console.ReadKey().KeyChar;
-
-                if (confirmSave == 'y')
-                {
-                    lines[lineIndex] = newMember.FirstName + " " + newMember.LastName + " " + newMember.SocialSecurityNumber + " " + newMember.UniqueId;
-                    File.WriteAllLines(path, lines);
-
-                    System.Console.WriteLine("Member saved!");
-                    System.Console.ReadKey();
-                }
-
+                System.Console.WriteLine("Member saved!");
+                System.Console.ReadKey();
             }
+
         }
 
         public static void AddMember()
