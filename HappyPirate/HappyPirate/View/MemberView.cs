@@ -34,7 +34,7 @@ namespace HappyPirate.view
                 try
                 {
                     selectedNumber = System.Console.ReadKey().KeyChar.ToString();
-                    if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 5 && selectedNumberInt >= 1)
+                    if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 5 && selectedNumberInt >= 0)
                     {
                         return selectedNumberInt;
                     }
@@ -187,5 +187,27 @@ namespace HappyPirate.view
             return new Member(firstName, lastName, socialSecurityNumber);
         }
 
+
+        public void ShowSpecificMemberInfo(Member member, List<Boat> memberBoats)
+        {
+            Console.Clear();
+            Console.WriteLine();
+            Console.WriteLine("Name: {0} {1}", member.FirstName, member.LastName);
+            Console.WriteLine("Social Security Number: {0}", member.SocialSecurityNumber);
+            Console.WriteLine("Member ID: {0}", member.UniqueId);
+            Console.WriteLine("Boats: ");
+
+            foreach (var boat in memberBoats)
+            {
+                if (boat.OwnerId == member.UniqueId)
+                {
+                    Console.WriteLine(" - - - Type: {0}, size: {1}*{2} meters", boat.Type, boat.Width, boat.Length);
+                }
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Press any key to go back.");
+            Console.ReadKey();
+        }
     }
 }

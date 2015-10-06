@@ -8,7 +8,7 @@ namespace HappyPirate.controller
 {
     class Controller
     {
-        private view.MainView ConsoleView;
+        private view.MainView MainView;
         private view.MemberView MemberView;
         private view.MemberListView MemberListView;
         private view.BoatView BoatView;
@@ -17,7 +17,7 @@ namespace HappyPirate.controller
 
         public Controller(view.MainView cV, view.MemberView mV, view.MemberListView mlV, model.Member m, view.BoatView bV, view.BoatListView bLV)
         {
-            ConsoleView = cV;
+            MainView = cV;
             MemberView = mV;
             MemberListView = mlV;
             MemberModel = m;
@@ -27,15 +27,15 @@ namespace HappyPirate.controller
 
         public bool MenuChoice() 
         {
-            ConsoleView.ShowMenu();
+            MainView.ShowMenu();
 
             view.MainView.Menu menuChoice;
 
-            menuChoice = ConsoleView.GetMenuChoice();
+            menuChoice = MainView.GetMenuChoice();
 
             if (menuChoice == HappyPirate.view.MainView.Menu.AddMember)
             {
-                ConsoleView.ClearMenu();
+                MainView.ClearMenu();
 
                 Member newMember = MemberView.AddMember();
 
@@ -44,9 +44,8 @@ namespace HappyPirate.controller
             }
             if (menuChoice == HappyPirate.view.MainView.Menu.ViewMembers)
             {
-                ConsoleView.ClearMenu();
-                //MemberListView.ShowAllMembers();
-
+                MainView.ClearMenu();
+                Console.WriteLine();
                 List<Member> memberList = model.DAL.MemberDAL.MemberList();
                 List<Boat> boatList = model.DAL.BoatDAL.BoatList("");
 
@@ -66,10 +65,13 @@ namespace HappyPirate.controller
                 int memberChoiceNumber = MemberListView.SelectMember();
 
                 Member selectedMember = model.DAL.MemberDAL.GetMember(memberChoiceNumber);
-                Console.WriteLine(selectedMember.UniqueId);
 
                 int memberMenuChoice = MemberView.ShowMemberMenu();
 
+                if (memberMenuChoice == 1)
+                {
+                    MemberView.ShowSpecificMemberInfo(selectedMember, boatList);
+                }
                 if (memberMenuChoice == 2)
                 {
                     MemberView.ChangeMember(selectedMember);
@@ -115,12 +117,12 @@ namespace HappyPirate.controller
             }
             if (menuChoice == HappyPirate.view.MainView.Menu.AddBoat)
             {
-                ConsoleView.ClearMenu();
-                ConsoleView.AddBoat();
+                MainView.ClearMenu();
+                MainView.AddBoat();
             }
             if (menuChoice == HappyPirate.view.MainView.Menu.None)
             {
-                ConsoleView.ShowMenu();
+                MainView.ShowMenu();
             }
             return true;
 
