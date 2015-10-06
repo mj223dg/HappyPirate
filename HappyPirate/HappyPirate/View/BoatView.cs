@@ -30,6 +30,39 @@ namespace HappyPirate.view
             return null;
         }
 
+        public int ShowBoatMenu()
+        {
+            string selectedNumber;
+            int selectedNumberInt;
+
+            while (true)
+            {
+                System.Console.WriteLine();
+                System.Console.WriteLine("Boat: ");
+                System.Console.WriteLine("1. View boat - NOT WORKING");
+                System.Console.WriteLine("2. Change boat");
+                System.Console.WriteLine("3. Delete boat");
+                System.Console.WriteLine("Any other key - go back");
+
+                try
+                {
+                    selectedNumber = System.Console.ReadKey().KeyChar.ToString();
+                    if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 5 && selectedNumberInt >= 1)
+                    {
+                        return selectedNumberInt;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+        }
 
         private Boat InputToBoatObject()
         {

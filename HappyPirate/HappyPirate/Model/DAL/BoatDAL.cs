@@ -19,12 +19,22 @@ namespace HappyPirate.model.DAL
             }
         }
 
-        public static List<string> BoatList(string ownerId)
+        public static List<Boat> BoatList(string ownerId)
         {
-            return System.IO.File
+            List<string> boats = System.IO.File
                 .ReadAllLines(BoatSavePath)
                 .Where(i => i.Contains(ownerId))
                 .ToList();
+            List<Boat> boatList = new List<Boat>();
+
+            foreach (var boat in boats)
+            {
+                string[] boatArray = boat.Split(' ');
+                Boat newBoat = new Boat(boatArray[0], boatArray[1], int.Parse(boatArray[2]), int.Parse(boatArray[3]));
+                boatList.Add(newBoat);
+            }
+
+            return boatList;
         }
 
 

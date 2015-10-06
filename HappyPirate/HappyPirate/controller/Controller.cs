@@ -74,9 +74,18 @@ namespace HappyPirate.controller
                 }
                 if (memberMenuChoice == 5)
                 {
-                    List<string> boats = model.DAL.BoatDAL.BoatList(selectedMember.UniqueId);
-
+                    List<Boat> boats = model.DAL.BoatDAL.BoatList(selectedMember.UniqueId);
+                   
                     BoatListView.ShowBoatsByMember(boats);
+
+                    int selectedBoat = BoatListView.SelectBoat(boats.Count);
+
+                    int boatMenuChoice = BoatView.ShowBoatMenu();
+
+                    if (boatMenuChoice == 2)
+                    {
+                        //model.DAL.BoatDAL.ChangeBoatInfo();
+                    }
 
                 }
 
