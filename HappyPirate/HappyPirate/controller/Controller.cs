@@ -39,7 +39,10 @@ namespace HappyPirate.controller
 
                 Member newMember = MemberView.AddMember();
 
-                model.DAL.MemberDAL.AddMember(newMember);
+                if (newMember != null)
+                {
+                    model.DAL.MemberDAL.AddMember(newMember); 
+                }
 
             }
             if (menuChoice == HappyPirate.view.MainView.Menu.ViewMembers)

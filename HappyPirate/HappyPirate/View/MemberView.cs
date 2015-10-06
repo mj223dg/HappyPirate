@@ -24,7 +24,7 @@ namespace HappyPirate.view
             {
                 System.Console.WriteLine();
                 System.Console.WriteLine("Member: ");
-                System.Console.WriteLine("1. View member - NOT WORKING");
+                System.Console.WriteLine("1. View member");
                 System.Console.WriteLine("2. Change member");
                 System.Console.WriteLine("3. Delete member");
                 System.Console.WriteLine(" - - - - - - - - ");

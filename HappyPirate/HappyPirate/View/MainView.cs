@@ -17,21 +17,6 @@ namespace HappyPirate.view
             AddBoat
         }
 
-        #region fields and constructor
-        private static readonly string MemberSavePath;
-        private static readonly string BoatSavePath;
-
-        static MainView()
-        {
-            MemberSavePath = Path.Combine(AppDomain.CurrentDomain
-                .GetData("APPBASE").ToString(), "members.txt");
-
-            BoatSavePath = Path.Combine(AppDomain.CurrentDomain
-                .GetData("APPBASE").ToString(), "boats.txt");
-        }
-        #endregion
-
-
         #region console menu interface methods
         public void ShowMenu()
         {
@@ -56,12 +41,6 @@ namespace HappyPirate.view
             ShowHeader();
         }
         #endregion
-        
-
-        private string getUserInput() 
-        {
-            return System.Console.ReadLine();
-        }
 
         public Menu GetMenuChoice()
         {
