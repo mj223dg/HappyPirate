@@ -84,7 +84,9 @@ namespace HappyPirate.controller
 
                     if (boatMenuChoice == 2)
                     {
-                        //model.DAL.BoatDAL.ChangeBoatInfo();
+                        Boat newBoatInfo = BoatView.AddBoat();
+                        newBoatInfo.OwnerId = selectedMember.UniqueId;
+                        model.DAL.BoatDAL.ChangeBoatInfo(selectedBoat, newBoatInfo);
                     }
 
                 }

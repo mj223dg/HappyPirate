@@ -37,6 +37,13 @@ namespace HappyPirate.model.DAL
             return boatList;
         }
 
+        public static void ChangeBoatInfo(int boatLineIndex, Boat newBoatInfo)
+        {
+            List<string> boatTextFile = new List<string>(File.ReadAllLines(BoatSavePath));
+
+            boatTextFile[boatLineIndex] = newBoatInfo.OwnerId + " " + newBoatInfo.Type + " " + newBoatInfo.Width + " " + newBoatInfo.Length;
+            File.WriteAllLines(BoatSavePath, boatTextFile);
+        }
 
     }
 }
