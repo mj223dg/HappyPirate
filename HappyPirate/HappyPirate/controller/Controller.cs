@@ -52,24 +52,34 @@ namespace HappyPirate.controller
 
                 while (true)
                 {
+                    string listType;
+                    int listTypeInt;
+
                     Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
-                    int listType = int.Parse(Console.ReadKey().KeyChar.ToString());
+                    listType = Console.ReadKey().KeyChar.ToString();
                     try
                     {
                         Console.Clear();
                         view.MainView.ShowHeader();
-                        if (listType == 1)
+
+                        if (Int32.TryParse(listType, out listTypeInt))
                         {
-                            MemberListView.ShowCompactList(memberList, boatList);
-                            break;
-                        }
-                        else if (listType == 2)
-                        {
-                            MemberListView.ShowVerboseList(memberList, boatList);
-                            break;
+                          
+                            if (listTypeInt == 1)
+                            {
+                                MemberListView.ShowCompactList(memberList, boatList);
+                                break;
+                            }
+                            else if (listTypeInt == 2)
+                            {
+                                MemberListView.ShowVerboseList(memberList, boatList);
+                                break;
+                            }
+
+                            System.Console.WriteLine("Choose between compact or verbose"); 
                         }
 
-                        System.Console.WriteLine("Choose between compact or verbose");
+                        System.Console.WriteLine("Must enter a number"); 
                     }
                     catch (Exception)
                     {
