@@ -92,7 +92,7 @@ namespace HappyPirate.controller
                     }
                     if (boatMenuChoice == 3)
                     {
-                        //model.DAL.BoatDAL.DeleteBoat(selectedBoat);
+                        model.DAL.BoatDAL.DeleteBoat(selectedBoatObject);
                     }
                 }
 
