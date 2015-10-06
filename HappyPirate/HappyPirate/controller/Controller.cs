@@ -115,11 +115,6 @@ namespace HappyPirate.controller
                 }
 
             }
-            if (menuChoice == HappyPirate.view.MainView.Menu.AddBoat)
-            {
-                MainView.ClearMenu();
-                MainView.AddBoat();
-            }
             if (menuChoice == HappyPirate.view.MainView.Menu.None)
             {
                 MainView.ShowMenu();

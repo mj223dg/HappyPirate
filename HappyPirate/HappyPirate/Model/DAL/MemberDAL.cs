@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HappyPirate.model.DAL
 {
-    public class MemberDAL : DALBase
+    public class MemberDAL
     {
         private static string MemberSavePath = Path.Combine(AppDomain.CurrentDomain
                 .GetData("APPBASE").ToString(), "members.txt");

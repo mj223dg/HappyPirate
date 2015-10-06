@@ -46,7 +46,6 @@
     <Compile Include="controller\Controller.cs" />
     <Compile Include="model\Boat.cs" />
     <Compile Include="model\DAL\BoatDAL.cs" />
-    <Compile Include="model\DAL\DALBase.cs" />
     <Compile Include="model\DAL\MemberDAL.cs" />
     <Compile Include="model\Member.cs" />
     <Compile Include="Program.cs" />

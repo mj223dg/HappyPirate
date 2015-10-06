@@ -16,7 +16,7 @@ namespace HappyPirate.view
             System.Console.WriteLine("Boat list");
             foreach (var boat in boats)
             {
-                System.Console.WriteLine("{0}. {1}, {2}, {3}x{4}", counter, boat.OwnerId, boat.Type, boat.Width, boat.Length);
+                System.Console.WriteLine("{0}. {1}, {2}, {3}x{4}", counter, boat.Type, boat.Width, boat.Length);
                 counter++;
             }
         }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace HappyPirate.model.DAL
 {
-    class BoatDAL : DALBase
+    class BoatDAL
     {
         private static string BoatSavePath = Path.Combine(AppDomain.CurrentDomain
                 .GetData("APPBASE").ToString(), "boats.txt");

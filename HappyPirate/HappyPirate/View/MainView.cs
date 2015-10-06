@@ -38,7 +38,6 @@ namespace HappyPirate.view
             ClearMenu();
             System.Console.WriteLine("1. Add member");
             System.Console.WriteLine("2. View Members");
-            System.Console.WriteLine("3. Add boat");
             System.Console.WriteLine();
         }
 
@@ -76,18 +75,7 @@ namespace HappyPirate.view
             {
                 return Menu.ViewMembers;
             }
-            if (c == '3')
-            {
-                return Menu.AddBoat;
-            }
             return Menu.None;
-        }
-
-        public void AddBoat()
-        {
-            BoatView newBoatView =  new BoatView();
-
-            newBoatView.AddBoat();
         }
     }
 }
