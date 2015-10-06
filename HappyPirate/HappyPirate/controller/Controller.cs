@@ -52,19 +52,34 @@ namespace HappyPirate.controller
                 List<Member> memberList = model.DAL.MemberDAL.MemberList();
                 List<Boat> boatList = model.DAL.BoatDAL.BoatList("");
 
-                Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
-                int listType = int.Parse(Console.ReadKey().KeyChar.ToString());
-                Console.Clear();
-                view.MainView.ShowHeader();
-                if (listType == 1)
+                while (true)
                 {
-                    MemberListView.ShowCompactList(memberList, boatList);
-                }
-                else
-                {
-                    MemberListView.ShowVerboseList(memberList, boatList);
-                }
+                    Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
+                    int listType = int.Parse(Console.ReadKey().KeyChar.ToString());
+                    try
+                    {
+                        Console.Clear();
+                        view.MainView.ShowHeader();
+                        if (listType == 1)
+                        {
+                            MemberListView.ShowCompactList(memberList, boatList);
+                            break;
+                        }
+                        else if (listType == 2)
+                        {
+                            MemberListView.ShowVerboseList(memberList, boatList);
+                            break;
+                        }
 
+                        System.Console.WriteLine("Choose between compact or verbose");
+                    }
+                    catch (Exception)
+                    {
+                        
+                        throw;
+                    }
+                }
+                
                 int memberChoiceNumber = MemberListView.SelectMember();
 
                 Member selectedMember = model.DAL.MemberDAL.GetMember(memberChoiceNumber);
