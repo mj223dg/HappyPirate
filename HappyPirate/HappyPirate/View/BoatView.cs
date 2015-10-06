@@ -30,6 +30,11 @@ namespace HappyPirate.view
             return null;
         }
 
+        public Boat ChangeBoatInfo()
+        {
+            return InputToBoatObject();
+        }
+
         public int ShowBoatMenu()
         {
             string selectedNumber;

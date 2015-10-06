@@ -80,15 +80,20 @@ namespace HappyPirate.controller
 
                     int selectedBoat = BoatListView.SelectBoat(boats.Count);
 
+                    Boat selectedBoatObject = boats[selectedBoat];
                     int boatMenuChoice = BoatView.ShowBoatMenu();
 
                     if (boatMenuChoice == 2)
                     {
-                        Boat newBoatInfo = BoatView.AddBoat();
+                        Boat newBoatInfo = BoatView.ChangeBoatInfo();
                         newBoatInfo.OwnerId = selectedMember.UniqueId;
-                        model.DAL.BoatDAL.ChangeBoatInfo(selectedBoat, newBoatInfo);
-                    }
 
+                        model.DAL.BoatDAL.ChangeBoatInfo(selectedBoatObject, newBoatInfo);
+                    }
+                    if (boatMenuChoice == 3)
+                    {
+                        //model.DAL.BoatDAL.DeleteBoat(selectedBoat);
+                    }
                 }
 
             }

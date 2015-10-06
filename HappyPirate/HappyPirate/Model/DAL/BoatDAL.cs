@@ -37,13 +37,26 @@ namespace HappyPirate.model.DAL
             return boatList;
         }
 
-        public static void ChangeBoatInfo(int boatLineIndex, Boat newBoatInfo)
+        public static void ChangeBoatInfo(Boat oldBoat, Boat newBoatInfo)
         {
             List<string> boatTextFile = new List<string>(File.ReadAllLines(BoatSavePath));
+
+            string oldBoatString = oldBoat.OwnerId + " " + oldBoat.Type + " " + oldBoat.Width + " " + oldBoat.Length;
+
+            int boatLineIndex = boatTextFile.FindIndex(line => line.Contains(oldBoatString));
 
             boatTextFile[boatLineIndex] = newBoatInfo.OwnerId + " " + newBoatInfo.Type + " " + newBoatInfo.Width + " " + newBoatInfo.Length;
             File.WriteAllLines(BoatSavePath, boatTextFile);
         }
 
+
+
+         public static void DeleteBoat(Boat boatToDelete)
+        {
+            string boatToString = boatToDelete.OwnerId + " " + boatToDelete.Type + " " + boatToDelete.Width + " " + boatToDelete.Length;
+            var file = System.IO.File.ReadAllLines(BoatSavePath);
+            var fileWithoutMemberToDelete = file.Where(line => !line.Contains(boatToString));
+            System.IO.File.WriteAllLines(BoatSavePath, fileWithoutMemberToDelete);
+        }
     }
 }
