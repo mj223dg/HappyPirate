@@ -31,8 +31,6 @@ namespace HappyPirate.model.DAL
             Console.WriteLine(memberKeyWord);
             List<string> lines = new List<string>(File.ReadAllLines(MemberSavePath));
             int lineIndex = lines.FindIndex(line => line.StartsWith(memberKeyWord));
-            System.Console.WriteLine("line index är {0}, memberkeyword är {1}", lineIndex, memberKeyWord);
-            System.Console.ReadLine();
 
             lines[lineIndex] = member.UniqueId + " " + member.FirstName + " " + member.LastName + " " + member.SocialSecurityNumber;
             File.WriteAllLines(MemberSavePath, lines);
