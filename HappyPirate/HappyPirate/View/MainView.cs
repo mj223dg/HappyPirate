@@ -8,7 +8,7 @@ using HappyPirate.Shared;
 
 namespace HappyPirate.view
 {
-    class Console
+    class MainView
     {
         public enum Menu { 
             None,
@@ -21,7 +21,7 @@ namespace HappyPirate.view
         private static readonly string MemberSavePath;
         private static readonly string BoatSavePath;
 
-        static Console()
+        static MainView()
         {
             MemberSavePath = Path.Combine(AppDomain.CurrentDomain
                 .GetData("APPBASE").ToString(), "members.txt");
@@ -42,7 +42,7 @@ namespace HappyPirate.view
             System.Console.WriteLine();
         }
 
-        public void ShowHeader()
+        public static void ShowHeader()
         {
             System.Console.WriteLine("//////////////////////");
             System.Console.WriteLine("// THE HAPPY PIRATE //");

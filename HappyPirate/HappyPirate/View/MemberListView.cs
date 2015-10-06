@@ -62,5 +62,43 @@ namespace HappyPirate.view
                 }
             }
         }
+
+        public void ShowCompactList(List<Member> members, List<Boat> boats)
+        {
+            int count = 1;
+            foreach (var member in members)
+            {
+                int numberOfBoats = 0;
+                foreach (var boat in boats)
+                {
+                    if (boat.OwnerId == member.UniqueId)
+                    {
+                        numberOfBoats++;
+                    }
+                }
+                Console.WriteLine("{0}. {1} {2}, {3}. Boats: {4}", count, member.FirstName, member.LastName, member.SocialSecurityNumber, numberOfBoats);
+                count++;
+            }
+        }
+
+        public void ShowVerboseList(List<Member> members, List<Boat> boats)
+        {
+            int count = 1;
+            foreach (var member in members)
+            {
+                Console.WriteLine("{0}. {1} {2} - {3}, id: {4}. ", count, member.FirstName, member.LastName, member.SocialSecurityNumber, member.UniqueId);
+                Console.WriteLine(" ---- Boats: ");
+                foreach (var boat in boats)
+                {
+                    if (boat.OwnerId == member.UniqueId)
+                    {
+                        Console.WriteLine("      {0}, {1}x{2}m", boat.Type, boat.Width, boat.Length);
+                    }
+                }
+                        Console.WriteLine();
+                count++;
+            }
+        }
+
     }
 }

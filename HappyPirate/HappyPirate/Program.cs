@@ -11,7 +11,7 @@ namespace HappyPirate
     {
         static void Main(string[] args)
         {
-            view.Console cV = new view.Console();
+            view.MainView cV = new view.MainView();
             view.MemberView mV = new view.MemberView();
             view.MemberListView mlV = new view.MemberListView();
             view.BoatListView bLV = new view.BoatListView();

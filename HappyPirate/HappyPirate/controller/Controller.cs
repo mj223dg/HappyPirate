@@ -8,14 +8,14 @@ namespace HappyPirate.controller
 {
     class Controller
     {
-        private view.Console ConsoleView;
+        private view.MainView ConsoleView;
         private view.MemberView MemberView;
         private view.MemberListView MemberListView;
         private view.BoatView BoatView;
         private view.BoatListView BoatListView;
         private model.Member MemberModel;
 
-        public Controller(view.Console cV, view.MemberView mV, view.MemberListView mlV, model.Member m, view.BoatView bV, view.BoatListView bLV)
+        public Controller(view.MainView cV, view.MemberView mV, view.MemberListView mlV, model.Member m, view.BoatView bV, view.BoatListView bLV)
         {
             ConsoleView = cV;
             MemberView = mV;
@@ -29,11 +29,11 @@ namespace HappyPirate.controller
         {
             ConsoleView.ShowMenu();
 
-            view.Console.Menu menuChoice;
+            view.MainView.Menu menuChoice;
 
             menuChoice = ConsoleView.GetMenuChoice();
 
-            if (menuChoice == HappyPirate.view.Console.Menu.AddMember)
+            if (menuChoice == HappyPirate.view.MainView.Menu.AddMember)
             {
                 ConsoleView.ClearMenu();
 
@@ -42,10 +42,26 @@ namespace HappyPirate.controller
                 model.DAL.MemberDAL.AddMember(newMember);
 
             }
-            if (menuChoice == HappyPirate.view.Console.Menu.ViewMembers)
+            if (menuChoice == HappyPirate.view.MainView.Menu.ViewMembers)
             {
                 ConsoleView.ClearMenu();
-                MemberListView.ShowAllMembers();
+                //MemberListView.ShowAllMembers();
+
+                List<Member> memberList = model.DAL.MemberDAL.MemberList();
+                List<Boat> boatList = model.DAL.BoatDAL.BoatList("");
+
+                Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
+                int listType = int.Parse(Console.ReadKey().KeyChar.ToString());
+                Console.Clear();
+                view.MainView.ShowHeader();
+                if (listType == 1)
+                {
+                    MemberListView.ShowCompactList(memberList, boatList);
+                }
+                else
+                {
+                    MemberListView.ShowVerboseList(memberList, boatList);
+                }
 
                 int memberChoiceNumber = MemberListView.SelectMember();
 
@@ -97,12 +113,12 @@ namespace HappyPirate.controller
                 }
 
             }
-            if (menuChoice == HappyPirate.view.Console.Menu.AddBoat)
+            if (menuChoice == HappyPirate.view.MainView.Menu.AddBoat)
             {
                 ConsoleView.ClearMenu();
                 ConsoleView.AddBoat();
             }
-            if (menuChoice == HappyPirate.view.Console.Menu.None)
+            if (menuChoice == HappyPirate.view.MainView.Menu.None)
             {
                 ConsoleView.ShowMenu();
             }

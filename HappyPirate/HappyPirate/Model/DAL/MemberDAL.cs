@@ -54,5 +54,22 @@ namespace HappyPirate.model.DAL
             return member;
         }
 
+        public static List<Member> MemberList()
+        {
+            List<string> members = System.IO.File
+                .ReadAllLines(MemberSavePath)
+                .ToList();
+            List<Member> memberList = new List<Member>();
+
+            foreach (var member in members)
+            {
+                string[] memberArray = member.Split(' ');
+                Member newMember = new Member(memberArray[0], memberArray[1], memberArray[2], memberArray[3]);
+                memberList.Add(newMember);
+            }
+
+            return memberList;
+        }
+
     }
 }

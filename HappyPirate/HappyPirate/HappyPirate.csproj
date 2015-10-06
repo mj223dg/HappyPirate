@@ -54,7 +54,7 @@
     <Compile Include="Shared\Validation.cs" />
     <Compile Include="view\BoatListView.cs" />
     <Compile Include="view\BoatView.cs" />
-    <Compile Include="view\Console.cs" />
+    <Compile Include="view\MainView.cs" />
     <Compile Include="view\MemberListView.cs" />
     <Compile Include="view\MemberView.cs" />
   </ItemGroup>

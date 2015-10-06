@@ -3,3 +3,4 @@ u5d5a Flygplan 10 10
 ar963 Coolboat 1 1
 7o4e9 Nybåt 4 12
 eoo9j enbauta 2 2
+ar963 Racerboat 1 1
