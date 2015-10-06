@@ -13,14 +13,12 @@ namespace HappyPirate.controller
         private view.MemberListView MemberListView;
         private view.BoatView BoatView;
         private view.BoatListView BoatListView;
-        private model.Member MemberModel;
 
-        public Controller(view.MainView cV, view.MemberView mV, view.MemberListView mlV, model.Member m, view.BoatView bV, view.BoatListView bLV)
+        public Controller(view.MainView cV, view.MemberView mV, view.MemberListView mlV, view.BoatView bV, view.BoatListView bLV)
         {
             MainView = cV;
             MemberView = mV;
             MemberListView = mlV;
-            MemberModel = m;
             BoatView = bV;
             BoatListView = bLV;
         }

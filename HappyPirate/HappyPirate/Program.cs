@@ -16,10 +16,9 @@ namespace HappyPirate
             view.MemberListView mlV = new view.MemberListView();
             view.BoatListView bLV = new view.BoatListView();
             view.BoatView bV = new view.BoatView();
-            model.Member m = new model.Member();
             
 
-            controller.Controller c = new controller.Controller(cV, mV, mlV, m, bV, bLV);
+            controller.Controller c = new controller.Controller(cV, mV, mlV, bV, bLV);
 
             while (c.MenuChoice()) ;
         }

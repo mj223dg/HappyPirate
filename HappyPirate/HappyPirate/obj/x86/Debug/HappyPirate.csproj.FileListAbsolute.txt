@@ -18,3 +18,8 @@ C:\Temp\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
 C:\Temp\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
 C:\Temp\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
 C:\Temp\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
+D:\Skolarbete\UML\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
+D:\Skolarbete\UML\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
+D:\Skolarbete\UML\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
+D:\Skolarbete\UML\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
+D:\Skolarbete\UML\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache

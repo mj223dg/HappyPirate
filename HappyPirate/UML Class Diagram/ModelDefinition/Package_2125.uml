@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bec59214-c9c6-457a-a8a8-70e28db75357"
+  name="DAL"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="5aa6832f-b287-46ac-8e95-7c8efe3c6ab0"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DHappyPirate.model.DAL"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="a954fe2d-94e6-43eb-97d1-fb5b9aafb310"
+        name="BoatDAL"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="2c3ae0a3-7687-4626-ad62-dd17269950d3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="872c94b4-c8ca-4292-a471-8845f095a182"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8b032ffa-b150-4467-8a13-598214c2dbe6">
+                <propertyInstance
+                  Id="f5e49ebe-43d9-44a0-98f7-7e8fe9186068"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5ec5a1e8-d9df-4afe-b0e6-b6b938bc5134">
+                <propertyInstance
+                  Id="caecdc31-699d-416c-927c-d6bdc6a98421"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="469c4348-700d-4086-b966-e3dbabc1253d">
+                <propertyInstance
+                  Id="ea201fb6-6236-492c-9c71-21dc05be0ae5"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="947c12a6-046a-4e48-8843-98d416ac680c">
+                <propertyInstance
+                  Id="d54048dc-c45d-4c4c-a506-a83f67a86636"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb69c78c-9aae-4d81-8ca4-b3137a1cd66c">
+                <propertyInstance
+                  Id="3b464984-b4a6-463f-b2c6-67cccee6c202"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="32671952-363c-410f-b2e4-80cf7cdf2949"
+            isDerived="false"
+            sourceEndRoleName="BoatDAL"
+            targetEndRoleName="Boat"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="89e4cf98-37ef-4d4e-a9aa-73f46b2a62d8"
+              LastKnownName="Boat"
+              LastKnownLocation="Package3_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2307a9bb-62c2-4ea3-acd4-ff336cf8e73e"
+                  name="BoatDAL"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b16b8262-3849-4cc2-a4f2-134de5a05af9"
+                  name="Boat"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="8f92dbf1-5f36-4931-b336-72e655586ed0"
+            name="BoatSavePath"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="be72abbc-7db5-44a9-8c1d-b9e79bb52695"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3DBoatSavePath"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e1f56c53-10af-4310-9e0f-46b545f094e0"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d11b6b34-230d-4ff4-8199-6d9d452c006e">
+                    <propertyInstance
+                      Id="021df91e-fd73-454b-a29a-d4968c42e631"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ab951f9-cc02-4757-813b-97ac1e2fef5b">
+                    <propertyInstance
+                      Id="7c1ac9fd-293a-4988-818f-da8ec1a3b17c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff200197-01cc-4c4a-a146-037aeedc8f2d">
+                    <propertyInstance
+                      Id="45b480a8-41eb-431c-946e-3094b946cd05"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7ebbe5aa-cc7d-44f5-947b-808a9c8e0904">
+                    <propertyInstance
+                      Id="c3eca127-ad6f-4bd3-81e8-cdd284c4827c"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="387da293-db5d-40d1-9816-f863ac81d6dc">
+                    <propertyInstance
+                      Id="ddebcf5e-dddd-4d72-b225-fea449d904d1"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="UML Class Diagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="10a89ad9-5177-499e-a22b-c77a88418904"
+            name="AddBoat"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6303a4c2-a272-4b6f-a029-110fd11fa14e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DAddBoat OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="944fd91f-db7b-4a31-8b7d-813b794ba9a9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa5a0770-14a5-41bf-9304-633169127be3">
+                    <propertyInstance
+                      Id="04e03743-11cb-4471-b27d-d1b1596c1e52"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7741129d-3ed2-455e-b7b7-31dfff4db53e">
+                    <propertyInstance
+                      Id="e49ebda6-1815-4f62-89d9-80f3851e968c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17232f38-ccc5-4e4d-9242-39e63ef7c832">
+                    <propertyInstance
+                      Id="265ceb9d-ba69-47c4-88cd-1b9a30b24722"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93a627b2-4ee2-46a7-8da1-369f68546903">
+                    <propertyInstance
+                      Id="68be2b04-1546-4e70-abd2-698a00c3345c"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fa7fe74-3f4d-44e6-b1c7-29fbdc0bb93f">
+                    <propertyInstance
+                      Id="f21d78e2-7c72-44e4-8799-4a694bdedb9c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a070b79-e704-4469-adbf-a88bfe6661a6">
+                    <propertyInstance
+                      Id="d474eebe-5547-444b-a120-2fd6977381a8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="69cd73ed-bbf6-4ce5-b887-ae90aefd3aa8"
+                  name="newBoat"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="3f8aec91-5960-43a0-826a-602928f29e67"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DAddBoat OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)]) ParameterIdentifier%3DnewBoat"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="89e4cf98-37ef-4d4e-a9aa-73f46b2a62d8"
+                      LastKnownName="Boat"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2b1e5dbb-6bd3-4e84-a261-341248cd0978"
+            name="BoatList"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a305a838-caa4-49ca-9cd6-089d20b76d48"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DBoatList OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a84b6cd8-04ab-4625-93d7-8be3e1e121dc"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7c8448e-3a5c-418a-9fd0-481d71208be7">
+                    <propertyInstance
+                      Id="f7a189da-8225-4cdd-acbd-583804e51710"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29f802c0-ba1c-42da-bacb-ea85ce67b991">
+                    <propertyInstance
+                      Id="c7188550-1605-4424-b496-20c5c7e052f0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8186a8b8-1907-4dd1-8c5b-b302a6b95b2d">
+                    <propertyInstance
+                      Id="8998071d-f4eb-4dc2-a3d0-093d8eac3fe3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e93fd504-1f63-46ea-8fff-15e28d07933b">
+                    <propertyInstance
+                      Id="749308d7-20f4-45f6-96f1-df62965394bc"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b3d42cdb-73e7-4357-b4a4-3a692886f3e7">
+                    <propertyInstance
+                      Id="0687df67-b0e9-4ca5-9285-08e19198f7ab"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6794295-d17a-4a5b-a988-eeade19a8133">
+                    <propertyInstance
+                      Id="3528d276-8859-41ae-9e75-94c3d9a4cdb2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4c8b22be-eb64-4847-a72b-f81f39d7455c"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="10191324-9390-4693-9e51-2b4f161c0c79"
+                      LastKnownName="List&lt;Boat‎&gt;"
+                      LastKnownLocation="Package3_2125.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d48e1b20-9a2d-4644-935d-cdbf34a4fe1b"
+                  name="ownerId"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="76aa3467-e68e-45b3-b24a-5c5336b408f9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DBoatList OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DownerId"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="UML Class Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="31ddd760-c745-4f5b-a82b-f0fc5a16cfe2"
+            name="ChangeBoatInfo"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8b53377a-97b6-4b6b-9685-b9dde95f0259"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DChangeBoatInfo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="94cebac8-500e-4118-bb77-2c5b970b0b28"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34a950b5-7c5d-4900-ae7f-e14848d60c44">
+                    <propertyInstance
+                      Id="64d5a132-6209-427f-bc32-2ac823c54831"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ade563a2-1f13-4f02-a1ea-1bf22a6620bc">
+                    <propertyInstance
+                      Id="e9cbc218-e31a-4fab-9bb4-7b5661c4a933"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7eae3871-c779-49e4-9c13-8941c5a39995">
+                    <propertyInstance
+                      Id="39b3a3e7-683b-47de-9698-8bb967ad3c58"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="29ddff80-5589-4aca-b09f-8c97a2bdf896">
+                    <propertyInstance
+                      Id="d2e65dac-3167-4da9-8de0-fe609dfe00cb"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c341b43-b728-4579-9527-0892f584422c">
+                    <propertyInstance
+                      Id="e9f9f5e8-0109-4f88-ab4c-a32da9270a99"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="890e65b9-f22f-41a9-bcce-e36050d326ef">
+                    <propertyInstance
+                      Id="f6a55a03-7bed-455a-b441-e5cabc51e9a8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ccf01e95-55af-4961-a298-1bf522b63e48"
+                  name="oldBoat"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="ce4cfd91-12cc-4900-8742-df889b2f34d4"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DChangeBoatInfo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)]) ParameterIdentifier%3DoldBoat"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="89e4cf98-37ef-4d4e-a9aa-73f46b2a62d8"
+                      LastKnownName="Boat"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0a05f98c-28a9-4d11-8ca1-ea54d306c54f"
+                  name="newBoatInfo"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="249f165d-7d4a-4d1c-9c53-f05d684bd39d"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DChangeBoatInfo OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)]) ParameterIdentifier%3DnewBoatInfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="89e4cf98-37ef-4d4e-a9aa-73f46b2a62d8"
+                      LastKnownName="Boat"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2ea990f6-126f-4e77-944f-db782ed47bc6"
+            name="DeleteBoat"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4ad01117-a501-4a74-acd9-1bd1ad7c9303"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DDeleteBoat OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a55b4c6b-5e6d-4afe-a7b3-b905b8ecd6d8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6afd8ce2-353c-4d57-a943-102afe05570d">
+                    <propertyInstance
+                      Id="e8b06560-9ae3-491e-8e7f-d16ac5567fab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="176297f5-d2db-434b-9ce9-01874e4662b3">
+                    <propertyInstance
+                      Id="f6df20cc-cc40-47fb-a783-a170b9b3a322"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e0d26f4-e88a-4e22-8f7e-c39ffcf36098">
+                    <propertyInstance
+                      Id="0d40bc6d-81ea-4393-9ab2-c1bb3920b490"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="85c12fd7-2d05-4fb2-b4f0-1031f5fc329b">
+                    <propertyInstance
+                      Id="4d215763-0000-48f2-8a7a-e01162f3486e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d5f7afa-4c57-4a1e-acef-e733b27dad18">
+                    <propertyInstance
+                      Id="24b7b5d0-3bda-4825-a67b-9edf58cd5777"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="93467de6-1388-457d-97b7-da82c33c3616">
+                    <propertyInstance
+                      Id="06fd2730-8317-4425-9ab5-192d04ad2f36"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="cf3b91dd-7f6c-45df-825b-d1169ff96d9e"
+                  name="boatToDelete"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7b64b6d6-8026-4fe6-bddd-3c97eecd27f8"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D(Name%3DDeleteBoat OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DBoat)]) ParameterIdentifier%3DboatToDelete"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="89e4cf98-37ef-4d4e-a9aa-73f46b2a62d8"
+                      LastKnownName="Boat"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d12db771-b3fb-42d4-97b0-a743e4b6bbb8"
+            name="BoatDAL"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="6f11e072-844e-4d47-8b48-032aac018af9"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DBoatDAL Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="dbaf8377-58a1-4859-8678-937c60890d3d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12168549-0881-4c76-b8e6-52652c9842c8">
+                    <propertyInstance
+                      Id="b3e508bb-deb5-4749-b584-190f141ee0aa"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5350eae-404f-4928-b003-b2c99b3eb9b3">
+                    <propertyInstance
+                      Id="2d7f88eb-df8f-4924-96e3-77f43a28562f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="855c7467-cf8c-4161-af5e-98bad6ea3920">
+                    <propertyInstance
+                      Id="e0c6c198-536f-4279-807b-d1a00b8bf1c2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7d862e7f-3e75-40a4-ba12-23dbed693d25">
+                    <propertyInstance
+                      Id="8d8c01b6-5eec-487d-ab8a-d26da88f7794"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d3db21a2-47f3-4a2c-8d66-e2b4a6ea2f3b">
+                    <propertyInstance
+                      Id="737b3c86-cd4a-4bfe-b17f-09f671a8155d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6105bc27-b995-43de-a804-53632e459c8a">
+                    <propertyInstance
+                      Id="d7dff12a-d9ca-4c69-8dba-3b5e9bc10c15"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3d5f81c1-0a58-45d8-b88d-52346c299dd7"
+        name="MemberDAL"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ac24971d-2953-4952-9c46-253ea36ee2a2"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7765b147-8f2a-4c85-ba9b-04bc16e59421"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="124b891e-0120-4ff9-a31b-c8020eadc6eb">
+                <propertyInstance
+                  Id="ee0a1e1f-d31e-4448-b975-887d8e3e7e87"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="62a47d12-d528-4a1a-87a7-d7fce055351a">
+                <propertyInstance
+                  Id="2f40bc0e-9dca-4689-89ab-20eeac24bf16"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="adc368d5-7805-45e7-9776-d36c53bf301e">
+                <propertyInstance
+                  Id="7b80c3a3-e617-45e6-8bd2-1ee764d00488"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d671a641-bf52-49b0-adcf-3162b10a0719">
+                <propertyInstance
+                  Id="bbdae4a0-af38-4d16-8262-b93afa20b495"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a0ab06f-9479-4b6c-8bae-b3fb2e2db5b8">
+                <propertyInstance
+                  Id="3cc88fc8-0f07-4619-be20-4e39c8fea6d1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="9328f407-19c1-4e47-9f1a-a0eb7d7dff0f"
+            isDerived="false"
+            sourceEndRoleName="MemberDAL"
+            targetEndRoleName="Member"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="d76756f9-3c83-440c-8d94-f97dbb8bef87"
+              LastKnownName="Member"
+              LastKnownLocation="Package3_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="95c7f728-f5d7-401c-9022-5e931c3d00c4"
+                  name="MemberDAL"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="142eafbe-9ffb-410d-95a3-144c5f7f8cd5"
+                  name="Member"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="ca050cf6-db6e-43b6-b3e4-40e31a88a7ba"
+            name="MemberSavePath"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="dad55f58-ac31-4275-9c66-cc7aaf9feefe"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3DMemberSavePath"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="bb6d9191-4cc7-4d8d-87a5-2db8b8af1838"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eb669ce9-6734-483c-8ded-b5a6473e3b05">
+                    <propertyInstance
+                      Id="40b1a5b2-d114-4481-8629-54b37ede6b3b"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="296d7f38-16bc-4b27-921c-3f27e0e18cfc">
+                    <propertyInstance
+                      Id="f3a55632-89d0-471d-b2b7-b626ec282a5f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83aa1764-0360-41a2-aa18-6bfe8377eba0">
+                    <propertyInstance
+                      Id="a8a44049-d88b-4139-8e76-6e93961c267a"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1fff9a57-bf7e-4615-9d27-fd45cda816ea">
+                    <propertyInstance
+                      Id="10e4c2fc-edfa-4099-82ea-43c99a60a7a6"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37ebe836-9edf-4627-88b8-95a2d2f89716">
+                    <propertyInstance
+                      Id="8cba4b6c-4588-4bb5-8807-5f8f568069cf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="UML Class Diagram.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ca197ba6-919a-4dc0-91c5-d2645ea43121"
+            name="AddMember"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3fc5d2a9-6e97-4dcb-afc7-af582a89e502"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DAddMember OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DMember)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="121ec291-64cd-4bda-a590-4bb749b3c7f9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7388b0ee-6f55-49f3-816c-32ea9bceb031">
+                    <propertyInstance
+                      Id="32ce47d7-23d9-4c86-8a4b-674b1df1d2ba"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c502de3-3ddc-4665-8c9e-550b7e339cf1">
+                    <propertyInstance
+                      Id="ceb5de77-b2fd-4ca4-b26f-f96a0bac8a1e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9009c0d-2838-4812-a758-cefcc9628a39">
+                    <propertyInstance
+                      Id="5a41bc6b-ec36-4473-9904-5755e923e2fa"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75da96a4-873f-4a16-ba43-c76bcb339ce8">
+                    <propertyInstance
+                      Id="4252a144-f066-4736-8f0f-33ec97ab15d5"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="56adb679-e179-458d-828b-f5fc8522e17c">
+                    <propertyInstance
+                      Id="d7cbbe7e-99bf-4a91-9d5e-ea5ffc8793b9"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31f33671-2102-4aa7-9249-f166c867d11d">
+                    <propertyInstance
+                      Id="9aeea4d2-0227-46f4-9db0-4a1b4db441c4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6938ebe1-c548-4254-b5be-3c2b11ab9aba"
+                  name="newMember"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="61b4a466-bcf3-4176-9fed-4ede429f70fd"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DAddMember OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DMember)]) ParameterIdentifier%3DnewMember"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d76756f9-3c83-440c-8d94-f97dbb8bef87"
+                      LastKnownName="Member"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ce32707d-a0b3-4e2b-8e8e-90f1b419f14a"
+            name="DeleteMember"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="b4c958c6-8948-479a-9017-06084efe6be3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DDeleteMember OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DMember)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0c1f3ba7-c82c-4133-8d93-43868b48dc1d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7252708-6c9c-4a68-b0fa-b99c724a87ea">
+                    <propertyInstance
+                      Id="8f3b4785-7dcd-4289-90f7-7b1e48c771df"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="454fb5ab-4b91-42a8-b8dd-fb03d6e63aaa">
+                    <propertyInstance
+                      Id="fad2c7df-2093-4830-9546-124f233a0f07"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1147ff9a-68d4-49d8-a354-c52b06184e15">
+                    <propertyInstance
+                      Id="bb5cf47f-cc10-4f29-aa9e-c0548f3aa298"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a4209bbc-6601-4678-891d-acb114e5ed6a">
+                    <propertyInstance
+                      Id="0b3dc770-d397-4b7f-acb5-dadf7c0ff0ee"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fded87d-7b36-4a89-8740-73fd8d316cd0">
+                    <propertyInstance
+                      Id="1c14c327-005a-4035-80d5-99834a9025c8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9572131e-8d5c-49d7-96c5-e9acdcd86052">
+                    <propertyInstance
+                      Id="e55bc039-a1b7-47f7-a5a1-976757f0dcc7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="42ab55b0-894f-4b79-b51c-49abfc358dff"
+                  name="memberToDelete"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9c71b1a6-632e-4553-8d39-96f21a44fc92"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DDeleteMember OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DMember)]) ParameterIdentifier%3DmemberToDelete"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d76756f9-3c83-440c-8d94-f97dbb8bef87"
+                      LastKnownName="Member"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a2bf1413-132b-4ddb-bdbe-71d9907b279b"
+            name="ChangeMember"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e05f9826-60bb-4948-8d15-9fc518f2eda5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DChangeMember OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DMember)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="85cd3d2c-bb66-4057-beab-de0be241291d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d841b5e1-db3d-457d-91a1-cf5dbb7fde6c">
+                    <propertyInstance
+                      Id="2714c301-ce10-4f28-bbeb-721fe72597a4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="61e7df95-df03-4b89-af5c-8ae644d88b95">
+                    <propertyInstance
+                      Id="0120a58f-50cc-4d81-bd12-ed5f92453b2f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9cc83f2e-cc8f-4396-83b6-eb6d5c8a70b7">
+                    <propertyInstance
+                      Id="618ce8be-0535-4819-b310-5a96d3f23b24"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab853331-c0bf-4a63-94fe-c0a909a20d37">
+                    <propertyInstance
+                      Id="3864d255-7790-4f3c-aa1b-71526eea9c25"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d64c6a13-3026-4172-85d6-a7732750b93d">
+                    <propertyInstance
+                      Id="ec3d4b68-722e-4796-bcbb-4ba187601f58"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ae80dca-80f6-4df5-bf81-f7009ce2fc4a">
+                    <propertyInstance
+                      Id="0c012e4f-9087-4cd5-9d9a-b27ed8419f9e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ef53bab4-4238-4949-990b-9facf9f48c75"
+                  name="memberKeyWord"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8e24cb15-30d7-4f2b-a5d1-8c162a0388d2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DChangeMember OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DMember)]) ParameterIdentifier%3DmemberKeyWord"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="UML Class Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f462f29a-cd59-4397-9984-28a74fc64427"
+                  name="member"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="809dfa58-83c7-4847-84b3-17977c511e8b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DChangeMember OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model Type%3DMember)]) ParameterIdentifier%3Dmember"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d76756f9-3c83-440c-8d94-f97dbb8bef87"
+                      LastKnownName="Member"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="c5dd8c8f-ef56-4ec3-af8e-f6598df46acc"
+            name="GetMember"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="4f880d34-038b-4ad0-818d-30a330193569"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DGetMember OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="edd98c82-b3f5-41a5-a137-f7fb327ceb84"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="399aa65f-9048-48f9-a46a-5aa0a1793651">
+                    <propertyInstance
+                      Id="9304b5d7-cd3c-47f6-9675-6bf06e726cb4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="801770cc-d2c0-4bbe-8e0a-5009a22dffa2">
+                    <propertyInstance
+                      Id="7872c2ae-bbe3-4222-8653-d0ef58d9f37e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="520a1e53-7ac8-44bd-bc45-c4352fd1ab4e">
+                    <propertyInstance
+                      Id="c2dd2c26-767f-40ba-b0d8-97e1da260f3d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31698a39-9653-4b59-94db-492726fb8b2e">
+                    <propertyInstance
+                      Id="dbea6638-bbc3-4cb3-b022-048ce172a57f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b2aa9188-9d4f-46ee-a515-71da7756a3ae">
+                    <propertyInstance
+                      Id="528e53e8-713d-464d-801b-94642423a3be"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80878ce4-bd6d-49da-8950-47bae94f5956">
+                    <propertyInstance
+                      Id="5bd6864e-418a-4e6e-bf88-e1292b2897ed"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9aacf6bf-b25c-4332-ac10-9c064145a109"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="d76756f9-3c83-440c-8d94-f97dbb8bef87"
+                      LastKnownName="Member"
+                      LastKnownLocation="Package3_2124.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="20fdd00c-63c2-4ad5-9e15-7f7c2ed03ab7"
+                  name="textFileLineIndex"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e5bea39e-8e8d-4b5f-89b0-5da081bff8a1"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D(Name%3DGetMember OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FProfile%2FClient%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3DtextFileLineIndex"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="UML Class Diagram.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="600a46f6-a10f-4bd0-b4bb-3a1247d23ef8"
+            name="MemberList"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f5e59688-880f-4e63-981a-c8ecb683bcb5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3DMemberList"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="12d136a7-82e3-4c48-a10e-ad6069403666"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="78cc012b-95a5-42d7-8d0d-3820714ae8bc">
+                    <propertyInstance
+                      Id="46a3b5be-283d-457e-afc3-a56e72477a90"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc3e658d-3029-4d7b-bcad-1a0906b8ccb1">
+                    <propertyInstance
+                      Id="23345b23-b35e-44f2-a851-a62cf914b692"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="415b36be-a389-44b1-bf67-82433560486f">
+                    <propertyInstance
+                      Id="434c2025-a39a-4161-b382-d39984c27022"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f85ae727-b642-44f5-a75a-75aad3210b10">
+                    <propertyInstance
+                      Id="415a9798-dda1-4150-bd88-7503bd011027"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="55c0c342-71e1-4322-ac15-e41a879250fd">
+                    <propertyInstance
+                      Id="ee484a67-2721-4e0f-ba5e-50934423b9dc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3f40ceb-5175-44b8-8dcb-cadca112d081">
+                    <propertyInstance
+                      Id="c0bc1516-13e7-42f3-8683-00e42909034d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="881ef260-1748-4212-a9b6-60c530ae2a15"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="bbee488b-6694-48f0-afe0-3718955a3cfc"
+                      LastKnownName="List&lt;Member‎&gt;"
+                      LastKnownLocation="Package3_2125.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="0b73e23a-73b2-4f56-81c8-20787dd2ac2e"
+            name="MemberDAL"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2b10c42f-74f4-4660-83cf-87aa8898f1c2"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.model.DAL Type%3DMemberDAL Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a0106ebd-5d1b-4c6f-9cc4-e247904dd851"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0917453a-a723-4425-b21a-01edc24bc584">
+                    <propertyInstance
+                      Id="4a660ad1-b128-41d7-b478-37ff6c9cf30a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5bf1efd5-c327-4f2b-a6bd-f18d403c9daa">
+                    <propertyInstance
+                      Id="cf4a7be3-9e09-405e-a29d-efcda4cf2472"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="91f7cf59-9c65-4bab-acc7-fed44326b2b3">
+                    <propertyInstance
+                      Id="c4f7cd15-8c33-4b05-962b-6359d8b8c053"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1b102b6e-728b-4873-a6fc-83fa6ae7aa0f">
+                    <propertyInstance
+                      Id="4ff1717b-8954-48a9-84c6-de04b0cff332"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7664c4a2-b4f7-43d8-a1b2-304d19866851">
+                    <propertyInstance
+                      Id="57584d36-be96-4545-902a-3450424b1cdf"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f102f0ba-9845-40e5-924d-2264117c6603">
+                    <propertyInstance
+                      Id="77bd5a54-d2d7-41fb-be25-d0c10e971ccb"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
