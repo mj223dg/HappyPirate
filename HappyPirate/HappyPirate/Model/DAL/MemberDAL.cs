@@ -28,7 +28,6 @@ namespace HappyPirate.model.DAL
 
         public static void ChangeMember(string memberKeyWord, Member member)
         {
-            Console.WriteLine(memberKeyWord);
             List<string> lines = new List<string>(File.ReadAllLines(MemberSavePath));
             int lineIndex = lines.FindIndex(line => line.StartsWith(memberKeyWord));
 

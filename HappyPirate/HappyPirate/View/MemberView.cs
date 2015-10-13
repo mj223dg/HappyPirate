@@ -64,7 +64,7 @@ namespace HappyPirate.view
             return false;
         }
 
-        public void ChangeMember(Member member)
+        public Member ChangeMember(Member member)
         {
             Member newMemberInfo = InputToMemberObject();
 
@@ -72,7 +72,7 @@ namespace HappyPirate.view
             member.LastName = newMemberInfo.LastName;
             member.SocialSecurityNumber = newMemberInfo.SocialSecurityNumber;
 
-            string memberKeyword = member.UniqueId;
+            //string memberKeyword = member.UniqueId;
 
             System.Console.WriteLine("{0} {1}\n{2}", member.FirstName, member.LastName, member.SocialSecurityNumber);
             System.Console.WriteLine();
@@ -82,11 +82,12 @@ namespace HappyPirate.view
 
             if (confirmSave == 'y')
             {
-                model.DAL.MemberDAL.ChangeMember(memberKeyword, member);
-
                 System.Console.WriteLine("Member saved!");
                 System.Console.ReadKey();
+                
+                return member;
             }
+            return null;
         }
 
         public Member AddMember()

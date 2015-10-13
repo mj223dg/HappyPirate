@@ -100,7 +100,8 @@ namespace HappyPirate.controller
                 }
                 if (memberMenuChoice == 2)
                 {
-                    MemberView.ChangeMember(selectedMember);
+                    Member member = MemberView.ChangeMember(selectedMember);
+                    model.DAL.MemberDAL.ChangeMember(member.UniqueId, member);
                 }
                 if (memberMenuChoice == 3)
                 {
