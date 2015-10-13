@@ -52,8 +52,7 @@ namespace HappyPirate.controller
 
                 while (true)
                 {
-                    string listType;
-                    int listTypeInt;
+                    HappyPirate.view.MemberListMenu listType;
 
                     listType = MemberListView.SelectListTypeMenu();
 
@@ -62,15 +61,15 @@ namespace HappyPirate.controller
                         Console.Clear();
                         view.MainView.ShowHeader();
 
-                        if (Int32.TryParse(listType, out listTypeInt))
+                        if (listType != HappyPirate.view.MemberListMenu.None)
                         {
-                          
-                            if (listTypeInt == 1)
+
+                            if (listType == HappyPirate.view.MemberListMenu.Compact)
                             {
                                 MemberListView.ShowCompactList(memberList, boatList);
                                 break;
                             }
-                            else if (listTypeInt == 2)
+                            else if (listType == HappyPirate.view.MemberListMenu.Verbose)
                             {
                                 MemberListView.ShowVerboseList(memberList, boatList);
                                 break;
@@ -79,7 +78,7 @@ namespace HappyPirate.controller
                             System.Console.WriteLine("Choose between compact or verbose"); 
                         }
 
-                        System.Console.WriteLine("Must enter a number"); 
+                        System.Console.WriteLine("Must enter 1 or 2."); 
                     }
                     catch (Exception)
                     {
@@ -92,32 +91,33 @@ namespace HappyPirate.controller
 
                 Member selectedMember = model.DAL.MemberDAL.GetMember(memberChoiceNumber);
 
-                int memberMenuChoice = MemberView.ShowMemberMenu();
+                HappyPirate.view.MemberViewMenu memberMenuChoice = MemberView.ShowMemberMenu();
 
-                if (memberMenuChoice == 1)
+                if (memberMenuChoice == HappyPirate.view.MemberViewMenu.ViewMember)
                 {
                     MemberView.ShowSpecificMemberInfo(selectedMember, boatList);
                 }
-                if (memberMenuChoice == 2)
+                if (memberMenuChoice == HappyPirate.view.MemberViewMenu.ChangeMember)
                 {
                     Member member = MemberView.ChangeMember(selectedMember);
                     model.DAL.MemberDAL.ChangeMember(member.UniqueId, member);
+
                 }
-                if (memberMenuChoice == 3)
+                if (memberMenuChoice == HappyPirate.view.MemberViewMenu.DeleteMember)
                 {
                     if (MemberView.DoDeleteMember())
                     {
                         model.DAL.MemberDAL.DeleteMember(selectedMember);
                     }
                 }
-                if (memberMenuChoice == 4)
+                if (memberMenuChoice == HappyPirate.view.MemberViewMenu.AddBoat)
                 {
                     Boat newBoat = BoatView.AddBoat();
                     newBoat.OwnerId = selectedMember.UniqueId;
 
                     model.DAL.BoatDAL.AddBoat(newBoat);
                 }
-                if (memberMenuChoice == 5)
+                if (memberMenuChoice == HappyPirate.view.MemberViewMenu.ViewBoats)
                 {
                     List<Boat> boats = model.DAL.BoatDAL.BoatList(selectedMember.UniqueId);
                    
@@ -126,16 +126,16 @@ namespace HappyPirate.controller
                     int selectedBoat = BoatListView.SelectBoat(boats.Count);
 
                     Boat selectedBoatObject = boats[selectedBoat];
-                    int boatMenuChoice = BoatView.ShowBoatMenu();
+                    HappyPirate.view.BoatViewMenu boatMenuChoice = BoatView.ShowBoatMenu();
 
-                    if (boatMenuChoice == 2)
+                    if (boatMenuChoice == HappyPirate.view.BoatViewMenu.Change)
                     {
                         Boat newBoatInfo = BoatView.ChangeBoatInfo();
                         newBoatInfo.OwnerId = selectedMember.UniqueId;
 
                         model.DAL.BoatDAL.ChangeBoatInfo(selectedBoatObject, newBoatInfo);
                     }
-                    if (boatMenuChoice == 3)
+                    if (boatMenuChoice == HappyPirate.view.BoatViewMenu.Delete)
                     {
                         model.DAL.BoatDAL.DeleteBoat(selectedBoatObject);
                     }

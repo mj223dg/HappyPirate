@@ -8,6 +8,12 @@ using System.Text;
 
 namespace HappyPirate.view
 {
+    public enum BoatViewMenu
+    {
+        Change,
+        Delete,
+        None
+    }
     class BoatView
     {
         public Boat AddBoat()
@@ -35,7 +41,7 @@ namespace HappyPirate.view
             return InputToBoatObject();
         }
 
-        public int ShowBoatMenu()
+        public BoatViewMenu ShowBoatMenu()
         {
             string selectedNumber;
             int selectedNumberInt;
@@ -44,9 +50,8 @@ namespace HappyPirate.view
             {
                 System.Console.WriteLine();
                 System.Console.WriteLine("Boat: ");
-                System.Console.WriteLine("1. View boat - NOT WORKING");
-                System.Console.WriteLine("2. Change boat");
-                System.Console.WriteLine("3. Delete boat");
+                System.Console.WriteLine("1. Change boat");
+                System.Console.WriteLine("2. Delete boat");
                 System.Console.WriteLine("Any other key - go back");
 
                 try
@@ -54,7 +59,15 @@ namespace HappyPirate.view
                     selectedNumber = System.Console.ReadKey().KeyChar.ToString();
                     if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 5 && selectedNumberInt >= 1)
                     {
-                        return selectedNumberInt;
+                        switch (selectedNumber.ToString())
+                        {
+                            case "1":
+                                return BoatViewMenu.Change;
+                            case "2":
+                                return BoatViewMenu.Delete;
+                            default:
+                                break;
+                        }
                     }
                     else
                     {

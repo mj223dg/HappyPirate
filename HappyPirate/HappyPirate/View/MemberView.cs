@@ -8,6 +8,16 @@ using HappyPirate.Shared;
 
 namespace HappyPirate.view
 {
+    public enum MemberViewMenu
+    {
+        ViewMember,
+        ChangeMember,
+        DeleteMember,
+        AddBoat,
+        ViewBoats,
+        None
+    }
+
     class MemberView
     {
         public Member GetMember(int textFileLineIndex)
@@ -15,7 +25,7 @@ namespace HappyPirate.view
             return model.DAL.MemberDAL.GetMember(textFileLineIndex);
         }
 
-        public int ShowMemberMenu()
+        public MemberViewMenu ShowMemberMenu()
         {
             string selectedNumber;
             int selectedNumberInt;
@@ -36,7 +46,21 @@ namespace HappyPirate.view
                     selectedNumber = System.Console.ReadKey().KeyChar.ToString();
                     if (Int32.TryParse(selectedNumber, out selectedNumberInt) && selectedNumberInt <= 5 && selectedNumberInt >= 0)
                     {
-                        return selectedNumberInt;
+                        switch (int.Parse(selectedNumber))
+                        {
+                            case 1:
+                                return MemberViewMenu.ViewMember;
+                            case 2:
+                                return MemberViewMenu.ChangeMember;
+                            case 3:
+                                return MemberViewMenu.DeleteMember;
+                            case 4:
+                                return MemberViewMenu.AddBoat;
+                            case 5:
+                                return MemberViewMenu.ViewBoats;
+                            default:
+                                return MemberViewMenu.None;
+                        }
                     }
                     else
                     {

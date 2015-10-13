@@ -7,6 +7,13 @@ using System.Text;
 
 namespace HappyPirate.view
 {
+    public enum MemberListMenu
+    {
+        Compact,
+        Verbose,
+        None
+    }
+
     class MemberListView
     {
         private string MemberSavePath = Path.Combine(AppDomain.CurrentDomain
@@ -44,10 +51,43 @@ namespace HappyPirate.view
             }
         }
 
-        public string SelectListTypeMenu()
+        public MemberListMenu SelectListTypeMenu()
         {
-            Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
-            return Console.ReadKey().KeyChar.ToString();
+            string select;
+            int selectInt;
+
+            while (true)
+            {
+                System.Console.WriteLine();
+                Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
+                select = Console.ReadKey().KeyChar.ToString();
+
+                try
+                {
+                    if (Int32.TryParse(select, out selectInt))
+                    {
+                        if (selectInt == 1)
+                        {
+                            return MemberListMenu.Compact;
+                        }
+                        else if (selectInt == 2)
+                        {
+                            return MemberListMenu.Verbose;
+                        }
+                        else
+                        {
+                            return MemberListMenu.None;
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
+            }
+
+
         }
 
         public void ShowCompactList(List<Member> members, List<Boat> boats)
