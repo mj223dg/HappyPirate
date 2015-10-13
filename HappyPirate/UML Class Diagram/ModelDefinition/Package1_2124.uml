@@ -287,6 +287,123 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="1fdeadcc-8500-456f-9ca5-66a9103cc783"
+            isDerived="false"
+            sourceEndRoleName="Controller"
+            targetEndRoleName="BoatViewMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="6dfe0257-4d0d-4afc-a517-37108c358d50"
+              LastKnownName="BoatViewMenu"
+              LastKnownLocation="Package2_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="01e8d3e9-202d-4211-9db2-9aaa57ca560e"
+                  name="Controller"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c1dc5f78-0ffc-46b1-904c-4a90c379f799"
+                  name="BoatViewMenu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1c39a462-cecc-45dc-9f61-c38f86a14ab1"
+            isDerived="false"
+            sourceEndRoleName="Controller"
+            targetEndRoleName="MemberListMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="e1c3c252-d7f5-42f4-b748-e9df44d20b51"
+              LastKnownName="MemberListMenu"
+              LastKnownLocation="Package2_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5af3686-4581-4811-90f0-d1fa1cb6580c"
+                  name="Controller"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="828ce832-63cc-4093-9e08-28088217f10a"
+                  name="MemberListMenu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5350fdb1-c143-4058-b12b-e5c76a9ebf60"
+            isDerived="false"
+            sourceEndRoleName="Controller"
+            targetEndRoleName="MemberViewMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="55bd86fc-c0b1-4717-9452-d1079119f6b5"
+              LastKnownName="MemberViewMenu"
+              LastKnownLocation="Package2_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="caca3a08-6964-4530-9345-d5548af9f3f8"
+                  name="Controller"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="45098676-7084-496d-9a28-aa5ca7bfff02"
+                  name="MemberViewMenu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property

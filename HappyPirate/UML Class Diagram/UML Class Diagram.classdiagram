@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="08bf1bcb-dd21-4433-a11e-d409c0058514" name="UML Class Diagram" linkedPackageId="16cad533-335b-4d38-9913-bbdd5631ba5a" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="d3473a2a-d2f0-473c-840a-88562386c0d0">
-      <profileInstance Id="71853367-cd2a-49c9-b791-37bde9154c12" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2a3b054d-176b-4ae5-af2d-5fb4e61a2631">
-      <profileInstance Id="31a830d4-15e0-4e67-833d-546c7eae30bd" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="30546c3e-9ffa-4691-a2d9-b96797dcbf5d">
-      <profileInstance Id="0b1c2ac1-439a-49c6-a851-31cf0e6df276" name="CSharpProfile">
-        <elementDefinition Id="d4b274f7-7456-4fb2-9125-77ee3285f3fb" />
-      </profileInstance>
-      <elementDefinition Id="ca3b6426-9516-4768-a6cf-df92dc565a83" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <referencedType Id="16432319-caec-41fb-b65b-7660085681a1" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
@@ -427,6 +407,54 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="663ad495-6e78-435e-9259-2829c0de2e69" />
+          </association>
+          <association Id="03105987-dbb1-4594-9d27-0d8d982d6f9b" isDerived="false" sourceEndRoleName="Controller" targetEndRoleName="BoatViewMenu" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="208ae872-aba9-4e40-907d-e66213037f77" LastKnownName="BoatViewMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f430d0a8-9210-4481-9997-bfe17a7f471a" name="Controller" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="01e8d3e9-202d-4211-9db2-9aaa57ca560e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="46e2a0a9-7491-44d6-8692-6ed3606088ef" name="BoatViewMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c1dc5f78-0ffc-46b1-904c-4a90c379f799" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1fdeadcc-8500-456f-9ca5-66a9103cc783" />
+          </association>
+          <association Id="69af822d-0630-4231-ac89-264eabfbc1fd" isDerived="false" sourceEndRoleName="Controller" targetEndRoleName="MemberListMenu" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="e45258cb-c2ee-4099-b6b5-e2e249c5cfd1" LastKnownName="MemberListMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2367e132-2365-4dda-bd82-3359a1e65da5" name="Controller" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="a5af3686-4581-4811-90f0-d1fa1cb6580c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="18833dc2-c2da-41c5-a3b9-774e7c388630" name="MemberListMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="828ce832-63cc-4093-9e08-28088217f10a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1c39a462-cecc-45dc-9f61-c38f86a14ab1" />
+          </association>
+          <association Id="85eacaaa-034d-41a9-b494-e91d3a76d02c" isDerived="false" sourceEndRoleName="Controller" targetEndRoleName="MemberViewMenu" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="60fe3fc6-170f-423c-b946-31f681f706ed" LastKnownName="MemberViewMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="309237ad-a85f-4604-9bef-519e15311b84" name="Controller" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="caca3a08-6964-4530-9345-d5548af9f3f8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="958ea68b-20a2-4aab-9846-4c831ff88033" name="MemberViewMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="45098676-7084-496d-9a28-aa5ca7bfff02" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5350fdb1-c143-4058-b12b-e5c76a9ebf60" />
           </association>
         </targetEnds>
         <ownedAttributesInternal>
@@ -3785,6 +3813,22 @@
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="aaffb5a8-b064-42b1-858b-bcf128414cc7" />
           </association>
+          <association Id="9c172a34-5297-49ac-9ee1-58dfc0f9bd86" isDerived="false" sourceEndRoleName="BoatView" targetEndRoleName="BoatViewMenu" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="208ae872-aba9-4e40-907d-e66213037f77" LastKnownName="BoatViewMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e285924-82d5-4b68-830d-3a189cf7868f" name="BoatView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5b3283ce-e023-4bd0-a5ec-06593e891c1a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8875867b-26a8-4553-957f-c3b4ea2346bf" name="BoatViewMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8e7633a7-5ac8-4535-9b78-9cfaa4aafba5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e7d489cf-8e63-4efb-917f-1b43b4c5f27f" />
+          </association>
         </targetEnds>
         <ownedOperationsInternal>
           <operation Id="4374d72d-bf64-4d73-aeae-0c031d9e7a3b" name="AddBoat" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -4462,6 +4506,24 @@
           </stereotypeInstance>
         </appliedStereotypesInternal>
         <elementDefinition Id="243f6590-c9de-4b85-b509-afac1d3143c7" />
+        <targetEnds>
+          <association Id="6b011aac-cd41-4526-a055-eda70e750f87" isDerived="false" sourceEndRoleName="MemberListView" targetEndRoleName="MemberListMenu" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="e45258cb-c2ee-4099-b6b5-e2e249c5cfd1" LastKnownName="MemberListMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="368f1fe9-9f86-4c1b-b482-e9db66825e18" name="MemberListView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="80de6314-65be-42d1-93e4-c0189987a5e0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="25b853ca-ca67-44b2-98a5-5ad601f4f3d5" name="MemberListMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f89dad5c-0f87-4263-a428-6bb454a32d3d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3ff43953-6cac-41bf-b73a-f963e710a21c" />
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property Id="c8adc43c-fe0c-4d8f-9ffb-4b12b2dc2d87" name="MemberSavePath" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <referencesInternal>
@@ -4932,6 +4994,22 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
             <elementDefinition Id="7a868c9a-35dd-4c26-ac74-70cf30b526b9" />
+          </association>
+          <association Id="6cd4cc03-c338-47e3-8285-07c4c2e9a641" isDerived="false" sourceEndRoleName="MemberView" targetEndRoleName="MemberViewMenu" isLeaf="false" isAbstract="false">
+            <enumerationMoniker Id="60fe3fc6-170f-423c-b946-31f681f706ed" LastKnownName="MemberViewMenu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0d16bc9e-0a97-4507-9282-26a00a454a4a" name="MemberView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="4b36d77d-5509-4dff-a0de-018cdbda2f7c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="368e94aa-808e-421c-a32c-b77f36a3cac4" name="MemberViewMenu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a5c3ff51-5745-4741-a9fd-79b312216980" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="8d50b442-0870-4928-83dc-ede3b9d72319" />
           </association>
         </targetEnds>
         <ownedOperationsInternal>
@@ -5452,8 +5530,235 @@
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="208ae872-aba9-4e40-907d-e66213037f77" name="BoatViewMenu" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="3cfeca1e-ded0-4fce-a298-956c31a4d71a" handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu" tag="ViewCode">
+            <elementDefinition Id="532b46e8-35ea-4d1c-9d90-a0c185104837" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="afe61a06-78da-47d4-af00-1d79a192f1cf" name="enum" profile="CSharpProfile">
+            <elementDefinition Id="e517eed4-9eca-4bbc-a3a1-07bd9ed17251" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="d5699083-9835-44f1-9806-f5b613ddfdc1">
+                <propertyInstance Id="c6213ae5-d6fb-41d3-a14c-8e4db3436133" name="ClrAttributes">
+                  <elementDefinition Id="35926912-a0b6-4e43-aa0b-e6783dfaaf72" />
+                </propertyInstance>
+                <elementDefinition Id="9182037c-e431-4f3b-bdeb-404fe42eac12" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="b7f54a75-5e50-422d-94bc-a514dda27417">
+                <propertyInstance Id="bf021013-ddd9-46d4-97e4-350a619c6cb9" name="BaseType" value="int">
+                  <elementDefinition Id="f088900d-13c0-43aa-9c73-95da3f50d09a" />
+                </propertyInstance>
+                <elementDefinition Id="e0dc7a08-6937-41bc-a86f-be3e14de2ade" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7e79661a-dcbe-4443-8d50-84ac7028cebd">
+                <propertyInstance Id="e85ec6c9-960a-469d-b1db-839916609f07" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="1388d33e-2268-4e10-a7b4-608d704888c8" />
+                </propertyInstance>
+                <elementDefinition Id="e724708d-e591-4917-93eb-1dc365bf951a" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="6dfe0257-4d0d-4afc-a517-37108c358d50" />
+        <ownedLiterals>
+          <enumerationLiteral Id="cf599d60-7a13-4222-905f-2e972f676532" name="Change">
+            <referencesInternal>
+              <reference Id="de9464d9-facc-449c-96ca-b9db7dcdad61" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu Member%3DChange" tag="ViewCode">
+                <elementDefinition Id="549a0e0d-9945-4cd3-b4ed-41e1881154af" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="ee0e41c3-465c-4a98-beb0-71b2f8df6204" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="4d933277-15b0-47b7-8566-e9b9209bc388" name="Delete">
+            <referencesInternal>
+              <reference Id="6c7ff548-a3c9-4262-baf8-654de3f56e97" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu Member%3DDelete" tag="ViewCode">
+                <elementDefinition Id="6d554be1-5cbe-4a1c-95c3-45fea0cbe2b0" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="214fd634-b6d8-41b7-a5fd-ffa3a528dc1b" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="889f3bc7-428f-4c27-b322-4658e67b5387" name="None">
+            <referencesInternal>
+              <reference Id="6870f3e3-5f2e-44f8-9e96-d98e5309473a" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu Member%3DNone" tag="ViewCode">
+                <elementDefinition Id="3efc5530-b7d7-4bf9-9c97-6a829f8ada77" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="af25eaaf-3110-46f7-bbf6-54b5702019b3" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="e45258cb-c2ee-4099-b6b5-e2e249c5cfd1" name="MemberListMenu" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="d309a006-e221-487d-ad2a-9a993f331a0b" handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu" tag="ViewCode">
+            <elementDefinition Id="4e29814c-8099-4b68-afa3-9e966dc1b3c7" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="7d2ca314-e93e-49f9-a4da-5a1f8140923c" name="enum" profile="CSharpProfile">
+            <elementDefinition Id="274dc871-09da-4c0d-a5b7-98179c888068" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="1105918b-3018-49ad-8ac7-db09cf544263">
+                <propertyInstance Id="3063c443-9ca9-4c57-bb52-5a237692c1ec" name="ClrAttributes">
+                  <elementDefinition Id="c9021567-3b67-43b2-abd6-259d20bc1464" />
+                </propertyInstance>
+                <elementDefinition Id="6be3b657-1ee6-46a9-8a4a-028b8bce0d1e" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="652d6b12-174e-480e-8c4f-2e151b6219a8">
+                <propertyInstance Id="1213ba5c-d848-4f6f-bf59-fcc9f4cd151c" name="BaseType" value="int">
+                  <elementDefinition Id="54318a78-6f99-4ecf-9b5c-2492d3a0c11c" />
+                </propertyInstance>
+                <elementDefinition Id="eb6deb86-4d06-4cd7-9721-f2d3f970d04f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="4163d48a-922c-4ab7-a879-861013f2171e">
+                <propertyInstance Id="2d3d552b-054d-431d-a85d-8dc8ab14c7e1" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="6831f339-8180-4a4c-8fd8-7b334762e598" />
+                </propertyInstance>
+                <elementDefinition Id="6f91e764-c4ff-4a18-bfb5-690cf92d08e1" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="e1c3c252-d7f5-42f4-b748-e9df44d20b51" />
+        <ownedLiterals>
+          <enumerationLiteral Id="d6591aa5-fa0c-4c36-a898-45924c87d911" name="Compact">
+            <referencesInternal>
+              <reference Id="eb698c83-7900-4774-a65e-e0721eaf8393" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu Member%3DCompact" tag="ViewCode">
+                <elementDefinition Id="4f34adae-7700-403f-bff6-9274d2b44341" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="9784ed0d-deb7-49b4-9750-bb0eb31f6082" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="80a94ef9-489d-46bd-9bd7-e7fdc2bdb032" name="Verbose">
+            <referencesInternal>
+              <reference Id="cdd853d1-44a5-4649-adb1-85ed65c7d0ae" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu Member%3DVerbose" tag="ViewCode">
+                <elementDefinition Id="ef03f793-ae82-4cad-b05f-95116b19dfa7" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="17d16fc2-4857-489e-b2e9-30c6000f95e5" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="9dd91eba-46f9-428a-8705-d2e0ea00694b" name="None">
+            <referencesInternal>
+              <reference Id="ad552e25-6949-42bd-a761-cb061812e007" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu Member%3DNone" tag="ViewCode">
+                <elementDefinition Id="febddae4-0071-4060-bf2b-e11d338eabc2" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="aeb57f0c-56b2-40e5-9f87-d6e612ee19a0" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <enumeration Id="60fe3fc6-170f-423c-b946-31f681f706ed" name="MemberViewMenu" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="549b61bf-a57e-4d92-bfd8-3159cb2bb5f4" handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu" tag="ViewCode">
+            <elementDefinition Id="0a2449ba-6f73-4289-880a-ff50a5dd39dd" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="0a306c16-43ea-4e5e-ab9b-ea89fc9d893d" name="enum" profile="CSharpProfile">
+            <elementDefinition Id="0360b44c-9a0a-4df9-8bef-292da3e126c0" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="aac0df2d-23a7-4c10-9411-f7b9162b9970">
+                <propertyInstance Id="3d8b103a-29f9-45dd-aa0e-9794c398a56c" name="ClrAttributes">
+                  <elementDefinition Id="a9b98b24-c7e3-4adb-81c5-fac139a83cc9" />
+                </propertyInstance>
+                <elementDefinition Id="7f3148ee-68d9-4f66-b6be-e00bc324dcda" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="94662ba2-cda9-4622-9843-b60e06ca5ba8">
+                <propertyInstance Id="44275652-decb-49d0-92e5-6f6cde6cef16" name="BaseType" value="int">
+                  <elementDefinition Id="ebb99678-029c-481f-a569-ccceb6e84c27" />
+                </propertyInstance>
+                <elementDefinition Id="dbbf0043-4275-4c98-a3f3-20d7cfcb1b7c" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="4dbf4b61-6f86-4c2f-9161-c6b3dc139231">
+                <propertyInstance Id="9c6aab90-a7b0-4c49-b9c0-cab9ad867b17" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="dde95754-165c-417d-8161-91c6e3ea8112" />
+                </propertyInstance>
+                <elementDefinition Id="3a8203c0-1e55-4ee0-bbb3-3532b5bfef06" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="55bd86fc-c0b1-4717-9452-d1079119f6b5" />
+        <ownedLiterals>
+          <enumerationLiteral Id="0ed445e3-2cec-454a-9e6a-14b25ae2a997" name="ViewMember">
+            <referencesInternal>
+              <reference Id="d517eb56-b4e4-4cfa-a97a-72b4cd10900c" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DViewMember" tag="ViewCode">
+                <elementDefinition Id="3351fffc-72d6-4e82-9884-099d2545c118" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="46e83829-3b6e-4c0d-8c54-0e6942ce2eed" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="09d3d7bf-bee1-484c-bdfd-c45da1b7640f" name="ChangeMember">
+            <referencesInternal>
+              <reference Id="d75ef6af-6dd9-4db7-932a-bea45e8a21d6" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DChangeMember" tag="ViewCode">
+                <elementDefinition Id="0ab86928-104b-4df5-822f-62208c265fb0" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="43d90618-93d9-4e32-be78-142e66f51555" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="6c5d84dd-c6c0-42f0-b8e6-59392a8be86e" name="DeleteMember">
+            <referencesInternal>
+              <reference Id="e7495664-b62f-4996-ad15-ef9db4624a87" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DDeleteMember" tag="ViewCode">
+                <elementDefinition Id="e9855a0d-3b6f-4b21-9d07-d44afa581d57" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="45830d9e-bcea-4347-8465-eece036c8894" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="53113dc8-f6a9-4342-9f6f-603cbe9ea402" name="AddBoat">
+            <referencesInternal>
+              <reference Id="e2ab7532-705e-49d4-be27-ceed410a444b" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DAddBoat" tag="ViewCode">
+                <elementDefinition Id="f142e2f0-ae05-4b46-ad56-ec4dc1295534" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="68a5efdf-41a4-4090-9f19-484418b39e94" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="2d14da43-855b-464f-8d86-89bcb4fc5f9f" name="ViewBoats">
+            <referencesInternal>
+              <reference Id="24139100-2c9d-4c5f-9474-be6a0e464dcb" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DViewBoats" tag="ViewCode">
+                <elementDefinition Id="0a1e4712-ae7a-40ca-8448-ae123ed5e8ed" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="00c0105c-38e7-4b93-948a-1950b22038fb" />
+          </enumerationLiteral>
+          <enumerationLiteral Id="64c96243-e0af-4f91-8db4-8a63fff9074b" name="None">
+            <referencesInternal>
+              <reference Id="37648e86-da61-4e4c-a9ae-97d5f89df5ab" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DNone" tag="ViewCode">
+                <elementDefinition Id="22928f9b-ab1d-4971-99d6-bcaa9138494f" />
+              </reference>
+            </referencesInternal>
+            <elementDefinition Id="a955f682-d88a-469f-9413-bb5311c84e4b" />
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="16cad533-335b-4d38-9913-bbdd5631ba5a" name="UML Class Diagram">
     <elementDefinition Id="fa8af9b7-1fe2-471e-a723-73c8cd5d19fc" />
+    <profileInstances>
+      <packageHasProfileInstances Id="d3473a2a-d2f0-473c-840a-88562386c0d0">
+        <profileInstance Id="71853367-cd2a-49c9-b791-37bde9154c12" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2a3b054d-176b-4ae5-af2d-5fb4e61a2631">
+        <profileInstance Id="31a830d4-15e0-4e67-833d-546c7eae30bd" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="30546c3e-9ffa-4691-a2d9-b96797dcbf5d">
+        <profileInstance Id="0b1c2ac1-439a-49c6-a851-31cf0e6df276" name="CSharpProfile">
+          <elementDefinition Id="d4b274f7-7456-4fb2-9125-77ee3285f3fb" />
+        </profileInstance>
+        <elementDefinition Id="ca3b6426-9516-4768-a6cf-df92dc565a83" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

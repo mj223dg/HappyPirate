@@ -588,6 +588,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="8d50b442-0870-4928-83dc-ede3b9d72319"
+            isDerived="false"
+            sourceEndRoleName="MemberView"
+            targetEndRoleName="MemberViewMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="55bd86fc-c0b1-4717-9452-d1079119f6b5"
+              LastKnownName="MemberViewMenu"
+              LastKnownLocation="Package2_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4b36d77d-5509-4dff-a0de-018cdbda2f7c"
+                  name="MemberView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a5c3ff51-5745-4741-a9fd-79b312216980"
+                  name="MemberViewMenu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
         <ownedOperationsInternal>
           <operation
@@ -1321,6 +1360,47 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="3ff43953-6cac-41bf-b73a-f963e710a21c"
+            isDerived="false"
+            sourceEndRoleName="MemberListView"
+            targetEndRoleName="MemberListMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="e1c3c252-d7f5-42f4-b748-e9df44d20b51"
+              LastKnownName="MemberListMenu"
+              LastKnownLocation="Package2_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="80de6314-65be-42d1-93e4-c0189987a5e0"
+                  name="MemberListView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f89dad5c-0f87-4263-a428-6bb454a32d3d"
+                  name="MemberListMenu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
         <ownedAttributesInternal>
           <property
             Id="3e901ed3-c162-4270-b7c8-24d44c1d0434"
@@ -1874,6 +1954,45 @@
                 <memberEnd
                   Id="9144012d-0ed9-4b75-a1e4-66ed734bbcd5"
                   name="Boat"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e7d489cf-8e63-4efb-917f-1b43b4c5f27f"
+            isDerived="false"
+            sourceEndRoleName="BoatView"
+            targetEndRoleName="BoatViewMenu"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="6dfe0257-4d0d-4afc-a517-37108c358d50"
+              LastKnownName="BoatViewMenu"
+              LastKnownLocation="Package2_2124.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5b3283ce-e023-4bd0-a5ec-06593e891c1a"
+                  name="BoatView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8e7633a7-5ac8-4535-9b78-9cfaa4aafba5"
+                  name="BoatViewMenu"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -2701,6 +2820,261 @@
               <reference
                 Id="0db79974-e874-47ae-aeb7-83c829358fd0"
                 handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FD:%2FSkolarbete%2FUML%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3D(Name%3DMenu ParentType%3DMainView) Member%3DAddBoat"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="6dfe0257-4d0d-4afc-a517-37108c358d50"
+        name="BoatViewMenu"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="532b46e8-35ea-4d1c-9d90-a0c185104837"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e517eed4-9eca-4bbc-a3a1-07bd9ed17251"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9182037c-e431-4f3b-bdeb-404fe42eac12">
+                <propertyInstance
+                  Id="35926912-a0b6-4e43-aa0b-e6783dfaaf72"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e0dc7a08-6937-41bc-a86f-be3e14de2ade">
+                <propertyInstance
+                  Id="f088900d-13c0-43aa-9c73-95da3f50d09a"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e724708d-e591-4917-93eb-1dc365bf951a">
+                <propertyInstance
+                  Id="1388d33e-2268-4e10-a7b4-608d704888c8"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="ee0e41c3-465c-4a98-beb0-71b2f8df6204"
+            name="Change">
+            <referencesInternal>
+              <reference
+                Id="549a0e0d-9945-4cd3-b4ed-41e1881154af"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu Member%3DChange"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="214fd634-b6d8-41b7-a5fd-ffa3a528dc1b"
+            name="Delete">
+            <referencesInternal>
+              <reference
+                Id="6d554be1-5cbe-4a1c-95c3-45fea0cbe2b0"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu Member%3DDelete"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="af25eaaf-3110-46f7-bbf6-54b5702019b3"
+            name="None">
+            <referencesInternal>
+              <reference
+                Id="3efc5530-b7d7-4bf9-9c97-6a829f8ada77"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DBoatViewMenu Member%3DNone"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="e1c3c252-d7f5-42f4-b748-e9df44d20b51"
+        name="MemberListMenu"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="4e29814c-8099-4b68-afa3-9e966dc1b3c7"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="274dc871-09da-4c0d-a5b7-98179c888068"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6be3b657-1ee6-46a9-8a4a-028b8bce0d1e">
+                <propertyInstance
+                  Id="c9021567-3b67-43b2-abd6-259d20bc1464"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="eb6deb86-4d06-4cd7-9721-f2d3f970d04f">
+                <propertyInstance
+                  Id="54318a78-6f99-4ecf-9b5c-2492d3a0c11c"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6f91e764-c4ff-4a18-bfb5-690cf92d08e1">
+                <propertyInstance
+                  Id="6831f339-8180-4a4c-8fd8-7b334762e598"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="9784ed0d-deb7-49b4-9750-bb0eb31f6082"
+            name="Compact">
+            <referencesInternal>
+              <reference
+                Id="4f34adae-7700-403f-bff6-9274d2b44341"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu Member%3DCompact"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="17d16fc2-4857-489e-b2e9-30c6000f95e5"
+            name="Verbose">
+            <referencesInternal>
+              <reference
+                Id="ef03f793-ae82-4cad-b05f-95116b19dfa7"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu Member%3DVerbose"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="aeb57f0c-56b2-40e5-9f87-d6e612ee19a0"
+            name="None">
+            <referencesInternal>
+              <reference
+                Id="febddae4-0071-4060-bf2b-e11d338eabc2"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberListMenu Member%3DNone"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="55bd86fc-c0b1-4717-9452-d1079119f6b5"
+        name="MemberViewMenu"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="0a2449ba-6f73-4289-880a-ff50a5dd39dd"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0360b44c-9a0a-4df9-8bef-292da3e126c0"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7f3148ee-68d9-4f66-b6be-e00bc324dcda">
+                <propertyInstance
+                  Id="a9b98b24-c7e3-4adb-81c5-fac139a83cc9"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="dbbf0043-4275-4c98-a3f3-20d7cfcb1b7c">
+                <propertyInstance
+                  Id="ebb99678-029c-481f-a569-ccceb6e84c27"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3a8203c0-1e55-4ee0-bbb3-3532b5bfef06">
+                <propertyInstance
+                  Id="dde95754-165c-417d-8161-91c6e3ea8112"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="46e83829-3b6e-4c0d-8c54-0e6942ce2eed"
+            name="ViewMember">
+            <referencesInternal>
+              <reference
+                Id="3351fffc-72d6-4e82-9884-099d2545c118"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DViewMember"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="43d90618-93d9-4e32-be78-142e66f51555"
+            name="ChangeMember">
+            <referencesInternal>
+              <reference
+                Id="0ab86928-104b-4df5-822f-62208c265fb0"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DChangeMember"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="45830d9e-bcea-4347-8465-eece036c8894"
+            name="DeleteMember">
+            <referencesInternal>
+              <reference
+                Id="e9855a0d-3b6f-4b21-9d07-d44afa581d57"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DDeleteMember"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="68a5efdf-41a4-4090-9f19-484418b39e94"
+            name="AddBoat">
+            <referencesInternal>
+              <reference
+                Id="f142e2f0-ae05-4b46-ad56-ec4dc1295534"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DAddBoat"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="00c0105c-38e7-4b93-948a-1950b22038fb"
+            name="ViewBoats">
+            <referencesInternal>
+              <reference
+                Id="0a1e4712-ae7a-40ca-8448-ae123ed5e8ed"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DViewBoats"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="a955f682-d88a-469f-9413-bb5311c84e4b"
+            name="None">
+            <referencesInternal>
+              <reference
+                Id="22928f9b-ab1d-4971-99d6-bcaa9138494f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FSonny%2FDocuments%2FPlugg%2FOOAD%2FHappyPirate%2FHappyPirate%2FHappyPirate%2FHappyPirate%2Fbin%2FDebug%2FHappyPirate.exe Namespace%3DHappyPirate.view Type%3DMemberViewMenu Member%3DNone"
                 tag="ViewCode" />
             </referencesInternal>
           </enumerationLiteral>
