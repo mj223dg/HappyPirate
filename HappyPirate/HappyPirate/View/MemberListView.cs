@@ -76,7 +76,7 @@ namespace HappyPirate.view
                         }
                         else
                         {
-                            return MemberListMenu.None;
+                            Console.WriteLine("Please enter 1 or 2.");
                         }
                     }
                 }

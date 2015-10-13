@@ -75,10 +75,8 @@ namespace HappyPirate.controller
                                 break;
                             }
 
-                            System.Console.WriteLine("Choose between compact or verbose"); 
                         }
 
-                        System.Console.WriteLine("Must enter 1 or 2."); 
                     }
                     catch (Exception)
                     {
