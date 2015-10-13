@@ -55,8 +55,8 @@ namespace HappyPirate.controller
                     string listType;
                     int listTypeInt;
 
-                    Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
-                    listType = Console.ReadKey().KeyChar.ToString();
+                    listType = MemberListView.SelectListTypeMenu();
+
                     try
                     {
                         Console.Clear();

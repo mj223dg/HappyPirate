@@ -44,6 +44,12 @@ namespace HappyPirate.view
             }
         }
 
+        public string SelectListTypeMenu()
+        {
+            Console.WriteLine("Choose list type. 1 for compact, 2 for verbose.");
+            return Console.ReadKey().KeyChar.ToString();
+        }
+
         public void ShowCompactList(List<Member> members, List<Boat> boats)
         {
             int count = 1;
