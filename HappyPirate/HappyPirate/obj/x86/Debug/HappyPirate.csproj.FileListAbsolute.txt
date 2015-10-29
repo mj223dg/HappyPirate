@@ -24,3 +24,8 @@ D:\Skolarbete\UML\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
 D:\Skolarbete\UML\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache
 K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe.CodeAnalysisLog.xml
 K:\Hemsida\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe.lastcodeanalysissucceeded
+C:\Git\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.exe
+C:\Git\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.pdb
+C:\Git\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
+C:\Git\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
+C:\Git\HappyPirate\HappyPirate\HappyPirate\obj\x86\Debug\HappyPirate.csprojResolveAssemblyReference.cache

@@ -45,7 +45,7 @@ namespace HappyPirate.view
                 }
                 catch (Exception)
                 {
-                    
+
                     throw;
                 }
             }
@@ -90,39 +90,44 @@ namespace HappyPirate.view
 
         }
 
-        public void ShowCompactList(List<Member> members, List<Boat> boats)
+        public void ShowCompactList(List<Member> members)
         {
             int count = 1;
+            int numberOfBoats = 0;
             foreach (var member in members)
             {
-                int numberOfBoats = 0;
-                foreach (var boat in boats)
+                if (member.Boats == null)
                 {
-                    if (boat.OwnerId == member.UniqueId)
-                    {
-                        numberOfBoats++;
-                    }
+                    numberOfBoats = 0;
+                }
+                else
+                {
+                    numberOfBoats = member.Boats.Count;
                 }
                 Console.WriteLine("{0}. {1} {2}, {3}. Boats: {4}", count, member.FirstName, member.LastName, member.SocialSecurityNumber, numberOfBoats);
                 count++;
             }
         }
 
-        public void ShowVerboseList(List<Member> members, List<Boat> boats)
+        public void ShowVerboseList(List<Member> members)
         {
             int count = 1;
             foreach (var member in members)
             {
                 Console.WriteLine("{0}. {1} {2} - {3}, id: {4}. ", count, member.FirstName, member.LastName, member.SocialSecurityNumber, member.UniqueId);
                 Console.WriteLine(" ---- Boats: ");
-                foreach (var boat in boats)
+                if (member.Boats != null)
                 {
-                    if (boat.OwnerId == member.UniqueId)
+                    foreach (var boat in member.Boats)
                     {
                         Console.WriteLine("      {0}, {1}x{2}m", boat.Type, boat.Width, boat.Length);
                     }
                 }
-                        Console.WriteLine();
+                else
+                {
+                    Console.WriteLine("      No boats");
+                }
+                Console.WriteLine();
                 count++;
             }
         }

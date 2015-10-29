@@ -12,11 +12,13 @@ namespace HappyPirate.model
         private string _lastName;
         private string _socialSecurityNumber;
 
+        public List<Boat> _boats = new List<Boat>();
+
         public string FirstName
-        { 
+        {
             get
             {
-                return _firstName; 
+                return _firstName;
             }
             set
             {
@@ -28,9 +30,9 @@ namespace HappyPirate.model
             }
         }
 
-        public string LastName 
+        public string LastName
         {
-            get 
+            get
             {
                 return _lastName;
             }
@@ -42,12 +44,12 @@ namespace HappyPirate.model
                 }
                 _lastName = value;
             }
-            
+
         }
 
         public string SocialSecurityNumber
         {
-            get 
+            get
             {
                 return _socialSecurityNumber;
             }
@@ -63,22 +65,29 @@ namespace HappyPirate.model
 
         public string UniqueId { get; set; }
 
+        public List<Boat> Boats
+        {
+            get { return _boats; }
+        }
+
         public Member(string firstName, string lastName, string socialSecurityNumber)
         {
             UniqueId = SetUniqueId();
             FirstName = firstName;
             LastName = lastName;
             SocialSecurityNumber = socialSecurityNumber;
+            _boats = new List<Boat>();
         }
-        public Member( string uniqueId, string firstName, string lastName, string socialSecurityNumber)
+        public Member(string uniqueId, string firstName, string lastName, string socialSecurityNumber)
         {
             FirstName = firstName;
             LastName = lastName;
             SocialSecurityNumber = socialSecurityNumber;
             UniqueId = uniqueId;
+            _boats = new List<Boat>();
         }
 
-        public Member(){}
+        public Member() { }
 
         private string SetUniqueId()
         {
@@ -109,6 +118,22 @@ namespace HappyPirate.model
             file.Close();
 
             return randomString;
+        }
+
+        public void AddBoat(Boat boat)
+        {
+            Boat newBoat = new Boat(boat.Type, boat.Width, boat.Length);
+            _boats.Add(newBoat);
+        }
+        public void DeleteBoat(int selectedBoatIndex)
+        {
+            Boats.RemoveAt(selectedBoatIndex);
+        }
+
+        public void ChangeBoat(int selectedBoatIndex, Boat newBoat)
+        {
+            DeleteBoat(selectedBoatIndex);
+            AddBoat(newBoat);
         }
 
     }

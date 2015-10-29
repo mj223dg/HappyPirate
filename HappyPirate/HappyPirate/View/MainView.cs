@@ -10,7 +10,8 @@ namespace HappyPirate.view
 {
     class MainView
     {
-        public enum Menu { 
+        public enum Menu
+        {
             None,
             AddMember,
             ViewMembers,
@@ -35,7 +36,7 @@ namespace HappyPirate.view
             System.Console.WriteLine();
         }
 
-        public void ClearMenu() 
+        public void ClearMenu()
         {
             System.Console.Clear();
             ShowHeader();

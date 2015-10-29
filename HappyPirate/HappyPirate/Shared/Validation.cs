@@ -23,7 +23,7 @@ namespace HappyPirate.Shared
             {
                 return false;
             }
-            
+
             return true;
         }
 

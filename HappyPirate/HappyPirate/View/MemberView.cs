@@ -69,7 +69,7 @@ namespace HappyPirate.view
                 }
                 catch (Exception)
                 {
-                    
+
                     throw;
                 }
             }
@@ -108,7 +108,7 @@ namespace HappyPirate.view
             {
                 System.Console.WriteLine("Member saved!");
                 System.Console.ReadKey();
-                
+
                 return member;
             }
             return null;
@@ -213,7 +213,7 @@ namespace HappyPirate.view
         }
 
 
-        public void ShowSpecificMemberInfo(Member member, List<Boat> memberBoats)
+        public void ShowSpecificMemberInfo(Member member)
         {
             Console.Clear();
             Console.WriteLine();
@@ -222,12 +222,16 @@ namespace HappyPirate.view
             Console.WriteLine("Member ID: {0}", member.UniqueId);
             Console.WriteLine("Boats: ");
 
-            foreach (var boat in memberBoats)
+            if (member.Boats != null)
             {
-                if (boat.OwnerId == member.UniqueId)
+                foreach (var boat in member.Boats)
                 {
                     Console.WriteLine(" - - - Type: {0}, size: {1}*{2} meters", boat.Type, boat.Width, boat.Length);
                 }
+            }
+            else
+            {
+                Console.WriteLine(" - - - No boats.");
             }
 
             Console.WriteLine();

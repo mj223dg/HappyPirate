@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-10-29T17:12:55" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: '07389da0-cbb8-468a-90f0-80770c4c3ea8' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate' -  (Package)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::model' -  (Package)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::model::Boat' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::model::Member' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view' -  (Package)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatListView' -  (Class)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatListView::BoatListView' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatListView::SelectBoat' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatListView::SelectBoat::numberOfBoats' -  (Parameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatListView::ShowBoatsByMember' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatListView::ShowBoatsByMember::boats' -  (Parameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatView' -  (Class)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatView::AddBoat' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatView::BoatView' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatView::ChangeBoatInfo' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatView::InputToBoatObject' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatView::ShowBoatMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatViewMenu' -  (Enumeration)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatViewMenu::Change' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatViewMenu::Delete' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::BoatViewMenu::None' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MainView' -  (Class)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MainView::ClearMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MainView::GetMenuChoice' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MainView::MainView' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MainView::ShowHeader' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MainView::ShowMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListMenu' -  (Enumeration)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListMenu::Compact' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListMenu::None' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListMenu::Verbose' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView' -  (Class)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::MemberListView' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::MemberSavePath' -  (Property)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::SelectListTypeMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::SelectMember' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::ShowCompactList' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::ShowCompactList::members' -  (Parameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::ShowVerboseList' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberListView::ShowVerboseList::members' -  (Parameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView' -  (Class)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::AddMember' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::ChangeMember' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::ChangeMember::member' -  (Parameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::DoDeleteMember' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::GetMember' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::GetMember::textFileLineIndex' -  (Parameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::InputToMemberObject' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::MemberView' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::ShowMemberMenu' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::ShowSpecificMemberInfo' -  (Operation)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberView::ShowSpecificMemberInfo::member' -  (Parameter)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberViewMenu' -  (Enumeration)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberViewMenu::AddBoat' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberViewMenu::ChangeMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberViewMenu::DeleteMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberViewMenu::None' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberViewMenu::ViewBoats' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::MemberViewMenu::ViewMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Medium" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::Menu' -  (Enumeration)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::Menu::AddBoat' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::Menu::AddMember' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::Menu::None' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::HappyPirate::view::Menu::ViewMembers' -  (EnumerationLiteral)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::System' -  (Package)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::System::Collections::Generic::List&lt;Boat‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'HappyPirateClassDiagram::System::Collections::Generic::List&lt;Member‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="High" Text="(9) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="High" Text="(5) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-10-29T17:12:58" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

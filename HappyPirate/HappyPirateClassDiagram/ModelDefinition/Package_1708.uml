@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="3d4ad04d-d1f8-4708-98c7-3bff75079dd4"
+  name="HappyPirate"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="247550aa-2b36-4ca4-ae14-f9f7a6161b7c"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DHappyPirate"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b13354bc-d447-404b-99d8-c30468e3c4b5"
+        LastKnownName="controller"
+        LastKnownLocation="Package1_1708.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a71e748d-5618-4eb7-ad80-bb2dad3d7477"
+        LastKnownName="view"
+        LastKnownLocation="Package2_1708.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="70ee9e32-0a64-4a54-9652-627ae4143e95"
+        LastKnownName="model"
+        LastKnownLocation="Package_1709.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="50f91cea-f871-4531-ba57-220b8ef39097"
+        LastKnownName="Shared"
+        LastKnownLocation="Package_1710.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

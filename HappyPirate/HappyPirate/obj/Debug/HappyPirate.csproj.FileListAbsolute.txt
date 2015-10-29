@@ -1,0 +1,15 @@
+C:\Users\Sonny\Documents\Plugg\OOAD\Workshop 2\ver31\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe.config
+C:\Users\Sonny\Documents\Plugg\OOAD\Workshop 2\ver31\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
+C:\Users\Sonny\Documents\Plugg\OOAD\Workshop 2\ver31\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
+C:\Users\Sonny\Documents\Plugg\OOAD\Workshop 2\ver31\HappyPirate\HappyPirate\obj\Debug\HappyPirate.exe
+C:\Users\Sonny\Documents\Plugg\OOAD\Workshop 2\ver31\HappyPirate\HappyPirate\obj\Debug\HappyPirate.pdb
+C:\Users\Sonny\Documents\Plugg\OOAD\Workshop 2\ver31\HappyPirate\HappyPirate\obj\Debug\HappyPirate.csprojResolveAssemblyReference.cache
+C:\Users\Adam\Desktop\ver31\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe.config
+C:\Users\Adam\Desktop\ver31\HappyPirate\HappyPirate\obj\Debug\HappyPirate.exe
+C:\Users\Adam\Desktop\ver31\HappyPirate\HappyPirate\obj\Debug\HappyPirate.pdb
+C:\Users\Adam\Desktop\ver31\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe
+C:\Users\Adam\Desktop\ver31\HappyPirate\HappyPirate\bin\Debug\HappyPirate.pdb
+C:\Users\Adam\Desktop\ver31\HappyPirate\HappyPirate\obj\Debug\HappyPirate.csprojResolveAssemblyReference.cache
+C:\Git\HappyPirate\HappyPirate\HappyPirate\bin\Debug\HappyPirate.exe.config
+C:\Git\HappyPirate\HappyPirate\HappyPirate\obj\Debug\HappyPirate.exe
+C:\Git\HappyPirate\HappyPirate\HappyPirate\obj\Debug\HappyPirate.pdb
