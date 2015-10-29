@@ -131,7 +131,7 @@
           <association
             Id="63fc1bc0-d406-4a17-ba69-ae5eee56ce17"
             isDerived="false"
-            sourceEndRoleName="Controller"
+            sourceEndRoleName=" "
             targetEndRoleName="BoatListView"
             isLeaf="false"
             isAbstract="false">
@@ -143,7 +143,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="ac8df485-3487-4794-96fd-e710e1a9eda9"
-                  name="Controller"
+                  name=" "
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -151,7 +151,18 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="adaf1525-493a-4f2d-92a5-4a054868af4b"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e9bef349-7e69-4804-b416-0c53139945f4"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -170,7 +181,7 @@
           <association
             Id="c401d275-7818-4706-bc6a-75d844cb9bf3"
             isDerived="false"
-            sourceEndRoleName="Controller"
+            sourceEndRoleName=" "
             targetEndRoleName="BoatView"
             isLeaf="false"
             isAbstract="false">
@@ -182,7 +193,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="d0ddbd37-4cdd-4fad-8774-f82eb327a326"
-                  name="Controller"
+                  name=" "
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -190,7 +201,18 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="7f704968-077d-415c-989d-904cca6719a9"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="feadb177-c4ef-43ab-91a0-a90d8ab7024c"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -209,7 +231,7 @@
           <association
             Id="664d28df-bfbf-4b05-a8fd-3ad6eca2814b"
             isDerived="false"
-            sourceEndRoleName="Controller"
+            sourceEndRoleName=" "
             targetEndRoleName="MainView"
             isLeaf="false"
             isAbstract="false">
@@ -221,7 +243,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="215e4ef1-a784-407c-addb-840f6ce23864"
-                  name="Controller"
+                  name=" "
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -229,7 +251,18 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f11a64be-be90-40b3-96f9-eb25e03fcf6d"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7353dc01-f106-416d-9e6b-4ddf97852a72"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -248,7 +281,7 @@
           <association
             Id="d510f34e-50c4-4ba9-b31d-9e9dc20b7d17"
             isDerived="false"
-            sourceEndRoleName="Controller"
+            sourceEndRoleName=" "
             targetEndRoleName="MemberView"
             isLeaf="false"
             isAbstract="false">
@@ -260,7 +293,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="3fe8495b-7557-4a3c-89db-323a3dd35687"
-                  name="Controller"
+                  name=" "
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -268,7 +301,18 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="ed902129-b176-4ce7-a30e-354cccd5f0c1"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="e4b5b7e5-16d7-41b0-82a7-023947fef2cf"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
@@ -287,7 +331,7 @@
           <association
             Id="b42faf00-5a7d-475b-aba9-493ed6050f76"
             isDerived="false"
-            sourceEndRoleName="Controller"
+            sourceEndRoleName=" "
             targetEndRoleName="MemberListView"
             isLeaf="false"
             isAbstract="false">
@@ -299,7 +343,7 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="282e2e78-72df-414d-b23f-7b24fb89579a"
-                  name="Controller"
+                  name=" "
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -307,7 +351,18 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="01a20a10-c3fa-4b2f-ad7e-eeaf7c341a17"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="b0f2826b-3d22-4a29-96ef-366aba47c7db"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd

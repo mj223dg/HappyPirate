@@ -500,87 +500,21 @@
               LastKnownName="Member"
               LastKnownLocation="Package_1709.uml" />
           </dependency>
-        </suppliersInternal>
-        <targetEnds>
-          <association
-            Id="9f183305-44a3-49ce-a7c8-8250824dd593"
-            isDerived="false"
-            sourceEndRoleName="MemberView"
-            targetEndRoleName="Validation"
-            isLeaf="false"
-            isAbstract="false">
+          <dependency
+            Id="d4d7664f-c32b-4178-845d-0919b319b80e">
             <classMoniker
               Id="7e9e1cd3-6bf1-4c66-af3b-8e7463bf4c6c"
               LastKnownName="Validation"
               LastKnownLocation="Package_1710.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="eb022ff8-5b5c-4c48-afe6-b39986037013"
-                  name="MemberView"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a26d74d4-0594-42f9-b0f9-a17daf54eaea"
-                  name="Validation"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="53b69b98-6854-45b9-b5c8-386a8d544460"
-            isDerived="false"
-            sourceEndRoleName="MemberView"
-            targetEndRoleName="MemberDAL"
-            isLeaf="false"
-            isAbstract="false">
+          </dependency>
+          <dependency
+            Id="718a3577-faad-4c1a-aed7-20f941bc2a04">
             <classMoniker
-              Id="bc3feb41-ccf6-4e0a-af24-606e1ed6f830"
-              LastKnownName="MemberDAL"
-              LastKnownLocation="Package4_1709.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="16fbd129-440a-4e83-b4f1-83c2fdb90976"
-                  name="MemberView"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="82038a45-2190-4279-ae0a-456a9ea631c1"
-                  name="MemberDAL"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
+              Id="8bc4e809-0635-48ab-827e-6455ed4ff06d"
+              LastKnownName="Boat"
+              LastKnownLocation="Package_1709.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="7714b603-0c6e-4b0c-8766-6c0f355df183"
@@ -1314,6 +1248,20 @@
               LastKnownName="MemberListMenu"
               LastKnownLocation="Package2_1708.uml" />
           </dependency>
+          <dependency
+            Id="614071f6-e613-4afe-8754-991645a1a52a">
+            <classMoniker
+              Id="2cc0f2a0-21b9-4d23-8400-2304472caac2"
+              LastKnownName="Member"
+              LastKnownLocation="Package_1709.uml" />
+          </dependency>
+          <dependency
+            Id="04368d5f-403c-44cc-899e-dd23a7285e47">
+            <classMoniker
+              Id="8bc4e809-0635-48ab-827e-6455ed4ff06d"
+              LastKnownName="Boat"
+              LastKnownLocation="Package_1709.uml" />
+          </dependency>
         </suppliersInternal>
         <ownedAttributesInternal>
           <property
@@ -1855,48 +1803,14 @@
               LastKnownName="Boat"
               LastKnownLocation="Package_1709.uml" />
           </dependency>
-        </suppliersInternal>
-        <targetEnds>
-          <association
-            Id="319f89f9-4819-4110-95c3-2eeda4d07ba1"
-            isDerived="false"
-            sourceEndRoleName="BoatView"
-            targetEndRoleName="Validation"
-            isLeaf="false"
-            isAbstract="false">
+          <dependency
+            Id="d1a7907c-ff59-44db-ac68-a5f9ec6041c9">
             <classMoniker
               Id="7e9e1cd3-6bf1-4c66-af3b-8e7463bf4c6c"
               LastKnownName="Validation"
               LastKnownLocation="Package_1710.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c816f5d9-6e07-4614-a282-aa46a1f397be"
-                  name="BoatView"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="c0d36802-2f82-4c65-8765-c02f26c45199"
-                  name="Validation"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="011bc11b-27ac-4aa6-84c3-14f48abcba2a"
@@ -2340,6 +2254,15 @@
             </propertyInstances>
           </stereotypeInstance>
         </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="1cbba4f6-bd86-4517-9ad5-7ebe7183e28e">
+            <classMoniker
+              Id="8bc4e809-0635-48ab-827e-6455ed4ff06d"
+              LastKnownName="Boat"
+              LastKnownLocation="Package_1709.uml" />
+          </dependency>
+        </suppliersInternal>
         <ownedOperationsInternal>
           <operation
             Id="f3c73cc3-1a2e-4edf-8bdf-932e3450de8f"

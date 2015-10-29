@@ -563,8 +563,8 @@
           <association
             Id="bf6df708-9b33-4dd6-8db4-e20331daad15"
             isDerived="false"
-            sourceEndRoleName="Member"
-            targetEndRoleName="Boat"
+            sourceEndRoleName=""
+            targetEndRoleName="Boats"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
@@ -575,7 +575,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="a1bdff4b-3021-41e3-a84a-db15c5bcf663"
-                  name="Member"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -583,19 +582,43 @@
                   isDerivedUnion="false"
                   aggregation="None"
                   isComposite="false"
-                  isNavigableOwned="false" />
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="aeda7d91-71d6-4f80-9d6c-87c61868c87f"
+                      name="Lower" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a55927b4-703f-428e-a48a-12992167642f"
+                      name="Upper" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="0251e37c-733b-419d-a33f-3d9a782a3773"
-                  name="Boat"
+                  name="Boats"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false" />
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f7a6e0df-0cfa-4769-9c04-0ddb06b30f63"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="810eb640-a40e-4389-9b49-2ccc390d119d"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>

@@ -20,11 +20,6 @@ namespace HappyPirate.view
 
     class MemberView
     {
-        public Member GetMember(int textFileLineIndex)
-        {
-            return model.DAL.MemberDAL.GetMember(textFileLineIndex);
-        }
-
         public MemberViewMenu ShowMemberMenu()
         {
             string selectedNumber;
@@ -129,7 +124,6 @@ namespace HappyPirate.view
 
             if (confirmSave == 'y')
             {
-                //model.DAL.MemberDAL.AddMember(newMember);
 
                 System.Console.WriteLine("Member saved!");
 
